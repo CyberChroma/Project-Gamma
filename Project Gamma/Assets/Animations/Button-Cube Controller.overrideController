@@ -1,0 +1,12 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Button-Cube Controller
+  m_Controller: {fileID: 9100000, guid: aa68cf68085eb4e4791b6bce40385978, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3334817b9a9385f4ea7d891ebf4503da, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8cb0cfec12d2988458bd9770899820de, type: 2}
