@@ -18,6 +18,7 @@ TagManager:
   - Smashable
   - Button-Pyramid
   - Turning Point
+  - Pyramid Shot
   layers:
   - Default
   - TransparentFX

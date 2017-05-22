@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 341f4d43303de1d4ca33fbb5d6434def
-timeCreated: 1489415903
+guid: 906743cb96c05b64888ec8a83b5d35af
+timeCreated: 1495467112
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,9 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Pyramid
-    4300002: Ice_Shard
-    7400000: Default Take
+    4300000: Hinge_Door
+    7400000: Knock Back
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -35,11 +34,41 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Knock Back
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1

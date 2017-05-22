@@ -23,7 +23,7 @@ public class ProjectileMover : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		rb.position = rb.position + moveSpeed * Vector3.forward * Time.deltaTime; // Moving the object to the object
+		rb.position = rb.position + moveSpeed * transform.forward * Time.deltaTime; // Moving the object to the object
 	}
 
 	IEnumerator Disable () {
@@ -32,7 +32,7 @@ public class ProjectileMover : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider other) {
-		if (!other.CompareTag ("Player")) {
+		if (!other.CompareTag ("Player") && !other.isTrigger) {
 			gameObject.SetActive (false);
 		}
 	}

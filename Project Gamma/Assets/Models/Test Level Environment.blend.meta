@@ -180,6 +180,7 @@ ModelImporter:
     100344: Ground_83
     100346: Section_6
     100348: Ground_84
+    100350: Roof_8
     400000: //RootNode
     400002: Ground
     400004: Ground_2
@@ -355,6 +356,7 @@ ModelImporter:
     400344: Ground_83
     400346: Section_6
     400348: Ground_84
+    400350: Roof_8
     2300000: //RootNode
     2300002: Ground
     2300004: Ground_2
@@ -512,6 +514,7 @@ ModelImporter:
     2300308: Ground_82
     2300310: Ground_83
     2300312: Ground_84
+    2300314: Roof_8
     3300000: //RootNode
     3300002: Ground
     3300004: Ground_2
@@ -669,6 +672,7 @@ ModelImporter:
     3300308: Ground_82
     3300310: Ground_83
     3300312: Ground_84
+    3300314: Roof_8
     4300000: Ground
     4300002: Ground_2
     4300004: Ground_2_001
@@ -825,6 +829,7 @@ ModelImporter:
     4300306: Ground_82
     4300308: Ground_81
     4300310: Ground_84
+    4300312: Roof_8
     6400000: //RootNode
     6400002: Ground
     6400004: Ground_2
@@ -982,6 +987,7 @@ ModelImporter:
     6400308: Ground_82
     6400310: Ground_83
     6400312: Ground_84
+    6400314: Roof_8
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 2d4f1e496d09113428f14b9a701b7cf5
-timeCreated: 1489367745
+guid: 7f59497d892dba147bb9baa4fd3b1641
+timeCreated: 1495468995
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Pyramid
+    4300000: Pyramid_Shot
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -28,7 +28,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
