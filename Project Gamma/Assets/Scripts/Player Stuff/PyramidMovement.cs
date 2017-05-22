@@ -5,6 +5,7 @@ using UnityEngine;
 public class PyramidMovement : MonoBehaviour {
 
 	public float moveSpeed; // The speed of the player
+	public float turnSpeed;
 
 	public float gravity;
 	public float jumpPower;
@@ -13,8 +14,10 @@ public class PyramidMovement : MonoBehaviour {
 	[HideInInspector] public bool canMove;
 	[HideInInspector] public float verticalVelocity;
 	[HideInInspector] public Vector3 inertia;
-
 	[HideInInspector] public bool invertMovement;
+	[HideInInspector] public bool turning;
+	[HideInInspector] public float targetRotation;
+
 	private bool wasOnGround;
 	private bool canJump;
 	private bool canDoubleJump; // Bool for whether the player can double jump
@@ -34,6 +37,7 @@ public class PyramidMovement : MonoBehaviour {
 		canDoubleJump = false;
 		storeMovement = false;
 		canMove = false;
+		turning = false;
 		controller = GetComponent<CharacterController> (); // Getting the reference
 	}
 
@@ -85,6 +89,14 @@ public class PyramidMovement : MonoBehaviour {
 			Jump ();
 		} 
 		Move ();
+		if (turning) {
+			transform.rotation = Quaternion.Euler (transform.rotation.x, Mathf.MoveTowards (transform.rotation.eulerAngles.y, targetRotation, turnSpeed), transform.rotation.z);
+			if (Quaternion.Angle(transform.rotation, Quaternion.Euler (Vector3.up * targetRotation)) <= 0.1f) {
+				transform.rotation = Quaternion.Euler (Vector3.up * targetRotation);
+				turning = false;
+				canMove = true;
+			}
+		}
 	}
 
 	void Move () { // Moves the cube
@@ -157,6 +169,16 @@ public class PyramidMovement : MonoBehaviour {
 		if (hit.collider.name.StartsWith ("Falling Platform")) {
 			fpc = hit.collider.GetComponent<FallingPlatformController> ();
 			fpc.Fall ();
+		}
+	}
+
+	void OnTriggerEnter (Collider other) {
+		if (other.CompareTag ("Turning Point")) {
+			transform.position = other.transform.position;
+			turning = true;
+			canMove = false;
+			targetRotation -= 90;
+			inertia = Vector3.zero;
 		}
 	}
 

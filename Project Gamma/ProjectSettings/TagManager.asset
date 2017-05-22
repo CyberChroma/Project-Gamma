@@ -17,6 +17,7 @@ TagManager:
   - Button-Sphere
   - Smashable
   - Button-Pyramid
+  - Turning Point
   layers:
   - Default
   - TransparentFX

@@ -62,22 +62,19 @@ public class CameraController : MonoBehaviour {
 		}
 		rotationX = Mathf.Clamp (rotationX, -80, 80);// Clamping the rotation
 		if (activePlayer == characterChanging.pyramid) {
-			if (pyramidMovement.invertMovement) {
-				rotationY = Mathf.Clamp (rotationY, 0, 180);// Clamping the rotation
-			} else {
-				rotationY = Mathf.Clamp (rotationY, -180, 0);// Clamping the rotation
+			if (characterChanging.pyramid.transform.rotation.eulerAngles.y > 350 && rotationY < 180) {
+				rotationY += 360;
 			}
+			rotationY = Mathf.Clamp (rotationY, characterChanging.pyramid.transform.rotation.eulerAngles.y - 170, characterChanging.pyramid.transform.rotation.eulerAngles.y - 10);// Clamping the rotation
 		}
 		if (Input.GetMouseButton (2) && activePlayer == characterChanging.cube) {
 			rotationY = activePlayer.transform.rotation.eulerAngles.y; // Center the camera behind the player
 		}
 		if (Input.GetMouseButtonDown (2) && activePlayer == characterChanging.pyramid) {
-			pyramidMovement.invertMovement = !pyramidMovement.invertMovement;
-			if (pyramidMovement.invertMovement) {
-				rotationY = 90;
-			} else {
-				rotationY = -90;
-			}
+			pyramidMovement.turning = true;
+			pyramidMovement.canMove = false;
+			pyramidMovement.targetRotation -= 180;
+			pyramidMovement.inertia = Vector3.zero;
 		}
 		transform.localEulerAngles = new Vector3(-rotationX, rotationY, 0); // Turning the camera
 	}
