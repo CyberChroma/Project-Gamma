@@ -33,6 +33,9 @@ public class ProjectileMover : MonoBehaviour {
 
 	void OnTriggerEnter (Collider other) {
 		if (!other.CompareTag ("Player") && !other.isTrigger) {
+			if (other.CompareTag ("Button-Pyramid")) {
+				other.GetComponent<ButtonController> ().Activate ();
+			}
 			gameObject.SetActive (false);
 		}
 	}

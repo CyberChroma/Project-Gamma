@@ -19,14 +19,14 @@ public class ButtonController : MonoBehaviour {
 			anim.SetTrigger ("Activate"); // Makes the button pressed
 			for (int i = 0; i <= objectsToTrigger.Length - 1; i++) {
 				if (objectsToTrigger [i].GetComponent<MovingObjectController> ()) {
-					MovingObjectController mOC = objectsToTrigger [i].GetComponent<MovingObjectController> (); // Gets the reference to the object's moving object controller script
-					mOC.triggersReceived++; // Activates the object's movement
+					objectsToTrigger [i].GetComponent<MovingObjectController> ().triggersReceived++; // Gets the reference to the object's moving object controller script and activates the object's movement
 				} else if (objectsToTrigger [i].GetComponent<BoostController> ()) {
-					BoostController bC = objectsToTrigger [i].GetComponent<BoostController> ();
-					bC.Activate ();
+					objectsToTrigger [i].GetComponent<BoostController> ().Activate ();
+				} else if (objectsToTrigger [i].GetComponent<TurningPointController> ()) {
+					objectsToTrigger [i].GetComponent<TurningPointController> ().Activate ();
 				}
 				isPressed = true;
-			}	
+			}
 		}
 	}
 }

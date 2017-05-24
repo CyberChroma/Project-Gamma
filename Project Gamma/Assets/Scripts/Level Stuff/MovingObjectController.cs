@@ -30,6 +30,7 @@ public class MovingObjectController : MonoBehaviour {
 	public ActivationType activationType; // Stores the selected activation type
 	public int triggersRequired;
 	public MotionType motionType; // Stores the selected motion type
+	public bool ignoreY;
 	public DeactivationType deactivationType; // Stores the selected activation type
 	public float startDelay; // The amount of delay until the object starts moving
 	public float nextTargetDelay; // The amount of delay until the object moves towards the next target
@@ -69,15 +70,24 @@ public class MovingObjectController : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (isActive) { // If the object should be moving
-			// Moves the position and rotation of the object towards its target's position and rotation
-			rb.position = Vector3.MoveTowards (rb.position, locations [targetLocation].position, moveSpeed / 10);
-			rb.rotation = Quaternion.RotateTowards (rb.rotation, locations [targetLocation].rotation, rotSpeed / 10);
-
-			// If the position and rotation of the object is equal to the position and rotation of its target
-			if (Vector3.Distance (rb.position, locations [targetLocation].position) <= 0.01f && Quaternion.Angle (rb.rotation, locations [targetLocation].rotation) <= 0.01f) {
-				StartCoroutine (GetNextTarget ());
+			if (ignoreY) {
+				// Moves the position and rotation of the object towards its target's position and rotation
+				rb.position = Vector3.MoveTowards (rb.position, new Vector3(locations [targetLocation].position.x, rb.position.y, locations [targetLocation].position.z), moveSpeed / 10);
+			} else {
+				rb.position = Vector3.MoveTowards (rb.position, locations [targetLocation].position, moveSpeed / 10);
 			}
-
+			rb.rotation = Quaternion.RotateTowards (rb.rotation, locations [targetLocation].rotation, rotSpeed / 10);
+			if (ignoreY) {
+				// If the position and rotation of the object is equal to the position and rotation of its target
+				if (Vector3.Distance (rb.position, new Vector3(locations [targetLocation].position.x, rb.position.y, locations [targetLocation].position.z)) <= 0.01f && Quaternion.Angle (rb.rotation, locations [targetLocation].rotation) <= 0.01f) {
+					StartCoroutine (GetNextTarget ());
+				}
+			} else {
+				// If the position and rotation of the object is equal to the position and rotation of its target
+				if (Vector3.Distance (rb.position, locations [targetLocation].position) <= 0.01f && Quaternion.Angle (rb.rotation, locations [targetLocation].rotation) <= 0.01f) {
+					StartCoroutine (GetNextTarget ());
+				}
+			}
 		}
 		if (Time.deltaTime != 0) {
 			velocity = (rb.position - lastPos) / Time.deltaTime / 50;

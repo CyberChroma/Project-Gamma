@@ -106,6 +106,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55a0f1a04ca82740beb4c3532f368ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTag: Player
-  startMat: {fileID: 2100000, guid: e3166bb09bf260441b222a8493d6ed5c, type: 2}
-  changeMat: {fileID: 2100000, guid: 449d60c2bcfe8b244bcc178a3e6f2d21, type: 2}
+  activeMat: {fileID: 2100000, guid: 449d60c2bcfe8b244bcc178a3e6f2d21, type: 2}

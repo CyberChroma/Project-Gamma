@@ -73,7 +73,7 @@ public class CameraController : MonoBehaviour {
 		if (Input.GetMouseButtonDown (2) && activePlayer == characterChanging.pyramid) {
 			pyramidMovement.turning = true;
 			pyramidMovement.canMove = false;
-			pyramidMovement.targetRotation -= 180;
+			pyramidMovement.targetRotation = characterChanging.pyramid.transform.rotation.eulerAngles.y - 180;
 			pyramidMovement.inertia = Vector3.zero;
 		}
 		transform.localEulerAngles = new Vector3(-rotationX, rotationY, 0); // Turning the camera

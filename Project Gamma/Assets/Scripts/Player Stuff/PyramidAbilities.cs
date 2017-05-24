@@ -12,6 +12,7 @@ public class PyramidAbilities : MonoBehaviour {
 	private int numShots = 5;
 	private GameObject[] shots;
 	private int nextShot;
+	private PyramidMovement pyramidMovement;
 
 	// Bools for whether the player has unlocked certain abilities
 	public bool shootShotUnlocked;
@@ -27,11 +28,12 @@ public class PyramidAbilities : MonoBehaviour {
 			shots [i].SetActive (false);
 		}
 		nextShot = 0;
+		pyramidMovement = GetComponent<PyramidMovement> ();
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (canMove) {
+		if (canMove && !pyramidMovement.turning) {
 			if (shootShotUnlocked) { // If the player has unlocked the shoot ice block ability
 				ShootShot ();
 			}

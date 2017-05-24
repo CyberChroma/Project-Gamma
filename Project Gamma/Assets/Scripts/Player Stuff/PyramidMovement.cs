@@ -38,6 +38,7 @@ public class PyramidMovement : MonoBehaviour {
 		storeMovement = false;
 		canMove = false;
 		turning = false;
+		targetRotation = transform.rotation.eulerAngles.y;
 		controller = GetComponent<CharacterController> (); // Getting the reference
 	}
 
@@ -177,7 +178,7 @@ public class PyramidMovement : MonoBehaviour {
 			transform.position = other.transform.position;
 			turning = true;
 			canMove = false;
-			targetRotation -= 90;
+			targetRotation = transform.rotation.eulerAngles.y - 90;
 			inertia = Vector3.zero;
 		}
 	}

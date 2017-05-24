@@ -9,19 +9,34 @@ ModelImporter:
     100002: ButtonBase
     100004: PressedButton
     100006: UnpressedButton
+    100008: Base
+    100010: Top-Pressed
+    100012: Top-Unpressed
     400000: //RootNode
     400002: ButtonBase
     400004: PressedButton
     400006: UnpressedButton
+    400008: Base
+    400010: Top-Pressed
+    400012: Top-Unpressed
     2300000: ButtonBase
     2300002: PressedButton
     2300004: UnpressedButton
+    2300006: Base
+    2300008: Top-Pressed
+    2300010: Top-Unpressed
     3300000: ButtonBase
     3300002: PressedButton
     3300004: UnpressedButton
+    3300006: Base
+    3300008: Top-Pressed
+    3300010: Top-Unpressed
     4300000: PressedButton
     4300002: ButtonBase
     4300004: UnpressedButton
+    4300006: Top-Pressed
+    4300008: Base
+    4300010: Top-Unpressed
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -11,27 +11,42 @@ ModelImporter:
     100006: ButtonBase
     100008: PressedButton
     100010: UnpressedButton
+    100012: Base
+    100014: Top-Pressed
+    100016: Top-Unpressed
     400000: //RootNode
     400002: Cube
     400004: Cube_001
     400006: ButtonBase
     400008: PressedButton
     400010: UnpressedButton
+    400012: Base
+    400014: Top-Pressed
+    400016: Top-Unpressed
     2300000: Cube
     2300002: Cube_001
     2300004: ButtonBase
     2300006: PressedButton
     2300008: UnpressedButton
+    2300010: Base
+    2300012: Top-Pressed
+    2300014: Top-Unpressed
     3300000: Cube
     3300002: Cube_001
     3300004: ButtonBase
     3300006: PressedButton
     3300008: UnpressedButton
+    3300010: Base
+    3300012: Top-Pressed
+    3300014: Top-Unpressed
     4300000: Cube_001
     4300002: Cube
     4300004: PressedButton
     4300006: ButtonBase
     4300008: UnpressedButton
+    4300010: Top-Pressed
+    4300012: Base
+    4300014: Top-Unpressed
     7400000: Unpressed
     7400002: Pressing
     7400004: Pressed
