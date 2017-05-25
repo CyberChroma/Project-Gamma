@@ -75,7 +75,7 @@ public class CubeMovement : MonoBehaviour {
 		if (!wasOnGround && controller.isGrounded) { // If it is the first frame of the player hitting the ground
 			canJump = true; // Setting the bool
 			wasOnGround = true; // Setting the bool
-			verticalVelocity /= 10; // Decreasing the vertical velocity
+			verticalVelocity /= 5; // Decreasing the vertical velocity
 			if (!stateInfo.IsName ("Land")) { // If the player is not in the land animation
 				anim.ResetTrigger ("Idle"); // Resetting the trigger
 				anim.ResetTrigger ("Moving"); // Resetting the trigger

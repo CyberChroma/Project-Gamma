@@ -64,7 +64,7 @@ public class PyramidMovement : MonoBehaviour {
 		if (!wasOnGround && controller.isGrounded) { // If the player is on the ground and wasn't last frame
 			canJump = true; // Setting the bool
 			wasOnGround = true; // Setting the bool
-			verticalVelocity /= 10; // Decreasing the vertical velocity
+			verticalVelocity /= 5; // Decreasing the vertical velocity
 		} else if (wasOnGround && !controller.isGrounded) { // If the player has just left the ground
 			if (mOC) { // If the player has a reference to the moving object controller
 				mOC.TestForDeactivate (); // Tests to deactivate the platform
