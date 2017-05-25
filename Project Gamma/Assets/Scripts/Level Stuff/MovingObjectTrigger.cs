@@ -12,8 +12,7 @@ public class MovingObjectTrigger : MonoBehaviour {
 		mOC = objectToMove.GetComponent<MovingObjectController> (); // Getting the reference
 	}
 
-	void OnTriggerEnter (Collider other)
-	{
+	void OnTriggerEnter (Collider other) {
 		if (other.CompareTag ("Player")) { // If the collided object is the player
 			mOC.isActive = true; // Activating the object's movement
 			Destroy (gameObject); // Destroys the gameobject

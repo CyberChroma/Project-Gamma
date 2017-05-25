@@ -219,7 +219,10 @@ MonoBehaviour:
     Space - Jump/Double Jump
 
 
-    Middle Mouse Button - Flip Camera'
+    Middle Mouse  - Flip
+
+
+    Left Mouse - Shoot'
 --- !u!114 &114358273748767190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,13 +261,13 @@ MonoBehaviour:
     A or D - Turn Cube
 
 
-    Middle Mouse Button - Reset Camera
+    Middle Mouse - Reset Camera
 
 
     Space - Jump
 
 
-    Left Mouse Button - Punch'
+    Left Mouse - Punch'
 --- !u!114 &114536388777249764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,7 +303,10 @@ MonoBehaviour:
   m_Text: 'W, A, S, D - Move Sphere
 
 
-    Left shift - Break'
+    Left Shift - Break
+
+
+    Left Mouse - Bounce/Slam'
 --- !u!114 &114566283058464096
 MonoBehaviour:
   m_ObjectHideFlags: 1

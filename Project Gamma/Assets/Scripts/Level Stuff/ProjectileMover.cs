@@ -4,7 +4,7 @@ using System.Collections;
 public class ProjectileMover : MonoBehaviour {
 
 	public float moveSpeed; // The speed of the object
-	public float lifetime;
+	public float lifetime; // The lifetime of the object
 
 	private Rigidbody rb; // Reference to the rigidbody component
 

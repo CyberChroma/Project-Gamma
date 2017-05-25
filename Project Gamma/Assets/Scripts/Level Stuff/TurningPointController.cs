@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class TurningPointController : MonoBehaviour {
 
-	public bool activated;
+	public bool activated; // Whether the turn point has been activated
 
-	public Material unactiveMat;
-	public Material activeMat;
+	public Material unactiveMat; // The unactive material
+	public Material activeMat; // The active material
 
-	private MeshRenderer[] meshRenderers;
+	private MeshRenderer[] meshRenderers; // References to the mesh renderers
 
 	// Use this for initialization
 	void Start () {
-		meshRenderers = GetComponentsInChildren<MeshRenderer> ();
-		if (!activated) {
-			foreach (MeshRenderer meshRenderer in meshRenderers) {
-				meshRenderer.material = unactiveMat;
+		meshRenderers = GetComponentsInChildren<MeshRenderer> (); // Getting the references
+		if (!activated) { // If the turn point starts unactive
+			foreach (MeshRenderer meshRenderer in meshRenderers) { // Going through each object
+				meshRenderer.material = unactiveMat; // Changing the material
 			}
-			gameObject.tag = "Untagged";
+			gameObject.tag = "Untagged"; // Setting the tag
 		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
-	public void Activate () {
-		foreach (MeshRenderer meshRenderer in meshRenderers) {
-			meshRenderer.material = activeMat;
+	public void Activate () { // Activates the turn point (Called by button)
+		foreach (MeshRenderer meshRenderer in meshRenderers) { // Going through each object
+			meshRenderer.material = activeMat; // Changing the material
 		}
-		gameObject.tag = "Turning Point";
+		gameObject.tag = "Turning Point"; // Setting the tag
 	}
 }

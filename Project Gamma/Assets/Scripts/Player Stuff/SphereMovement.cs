@@ -4,82 +4,88 @@ using System.Collections;
 public class SphereMovement : MonoBehaviour {
 
 	public float moveSpeed; // The move speed of the player
-	public float airMoveSpeed;
-	public float velocityDecreaseRate; // The speed the player slows down
+	public float airMoveSpeed; // The move speed of the sphere while in the air
+	public float velocityDecreaseRate; // How fast the player slows down
 	public Transform camPivot; // Reference to the camera pivot's transform
 
-	[HideInInspector] public bool canMove;
-	[HideInInspector] public float currentSpeed;
-	[HideInInspector] public bool isGrounded;
+	[HideInInspector] public bool canMove; // Whether the player can move
+	[HideInInspector] public float currentSpeed; // The current speed of the player
+	[HideInInspector] public bool isGrounded; // Whether the player is on the ground
 	[HideInInspector] public Rigidbody rb; // Reference to the rigidbody component
-	private FallingPlatformController fpc;
-	private MovingObjectController mOC;
+	private FallingPlatformController fpc; // Used for temporary references to falling platform controller scripts
+	private MovingObjectController mOC; // Used for temporary references to moveing platform controller scripts
 
 	void Awake () {
-		canMove = false;
-		isGrounded = false;
-		currentSpeed = moveSpeed;
+		canMove = false; // Setting the bool
+		isGrounded = false; // Setting the bool
+		currentSpeed = airMoveSpeed; // Setting the move speed
 		rb = GetComponent<Rigidbody> (); // Getting the reference
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (canMove) {
+		if (canMove) { // If the player can move
 			float h = Input.GetAxis ("Horizontal"); // Getting input from the left and right arrow keys (or a and d)
 			float v = Input.GetAxis ("Vertical"); // Getting input from the up and down arrow keys (or w and s)
 			Move (h, v);
-		} else {
-			rb.velocity = new Vector3 (Mathf.Lerp (rb.velocity.x, 0, velocityDecreaseRate / 10), rb.velocity.y, Mathf.Lerp (rb.velocity.z, 0, velocityDecreaseRate / 10));
+		} else { // (If the player cannot move)
+			rb.velocity = new Vector3 (Mathf.Lerp (rb.velocity.x, 0, velocityDecreaseRate / 10), rb.velocity.y, Mathf.Lerp (rb.velocity.z, 0, velocityDecreaseRate / 10)); // Slowing the player
 		}
 	}
 
 	void Move (float h, float v) { // Moves the sphere
-		if (mOC && mOC.isActive) {
-			rb.position = (rb.position + mOC.velocity);
+		if (mOC && mOC.isActive) { // If the player has a reference to a moving object controller
+			rb.position = (rb.position + mOC.velocity); // Adding to velocity to make the player follow the platform
 		}
 		Vector3 force = camPivot.right * h + camPivot.forward * v; // Variable for force
-		force = new Vector3(force.x, 0, force.z).normalized * currentSpeed;
+		force = new Vector3(force.x, 0, force.z).normalized * currentSpeed; // Calculating force
 		rb.AddForce (force); // Applying the force
-		if (Input.GetKey (KeyCode.Space)) {
-			rb.velocity = new Vector3 (Mathf.Lerp (rb.velocity.x, 0, velocityDecreaseRate / 10), rb.velocity.y, Mathf.Lerp (rb.velocity.z, 0, velocityDecreaseRate / 10));
+		if (Input.GetKey (KeyCode.Space)) { // If the player presses the space button
+			rb.velocity = new Vector3 (Mathf.Lerp (rb.velocity.x, 0, velocityDecreaseRate / 10), rb.velocity.y, Mathf.Lerp (rb.velocity.z, 0, velocityDecreaseRate / 10)); // Slows the player down
+		}
+	}
+
+	void OnCollisionEnter (Collision other) {
+		if (other.gameObject.CompareTag ("Button-All")) { // If then player has hit a button
+			other.gameObject.GetComponent<ButtonController> ().Activate (); // Activates it
 		}
 	}
 
 	void OnCollisionStay (Collision other) {
-		currentSpeed = moveSpeed;
-		if (!isGrounded) {
-			RaycastHit hit;
-			if (Physics.Raycast (transform.position, Vector3.down, out hit, 0.35f)) {
-				isGrounded = true;
+		currentSpeed = moveSpeed; // Changing the current speed of the player
+		if (!isGrounded) { // If the player is not on the ground
+			RaycastHit hit; // Used to get information from a raycast
+			if (Physics.Raycast (transform.position, Vector3.down, out hit, 0.35f)) { // Shooting a ray down to see it the player is on the ground
+				isGrounded = true; // Setting the bool
 			}
 		}
-		if (other.collider.CompareTag ("Stick") && !mOC) {
-			mOC = other.gameObject.GetComponentInParent<MovingObjectController> ();
-			rb.velocity -= mOC.velocity * 50;
-			mOC.TestForActivate ();
+		if (other.collider.CompareTag ("Stick") && !mOC) { // If the object hit is a moving platform the player should stick to
+			mOC = other.gameObject.GetComponentInParent<MovingObjectController> (); // Getting the reference
+			rb.velocity -= mOC.velocity * 50; // Decreasing the velocity of the ball
+			mOC.TestForActivate (); // Testing to activate the platform
 		}
-		if (other.collider.name.StartsWith ("Falling Platform")) {
-			fpc = other.collider.GetComponent<FallingPlatformController> ();
-			fpc.Fall ();
+		if (other.collider.name.StartsWith ("Falling Platform")) { // If the object hit is a falling platform
+			fpc = other.collider.GetComponent<FallingPlatformController> (); // Getting the reference
+			fpc.Fall (); // Making the platform fall
 		}
 	}
 
 	void OnCollisionExit (Collision other) {
-		currentSpeed = airMoveSpeed;
-		if (isGrounded) {
-			RaycastHit hit;
-			if (!Physics.Raycast (transform.position, Vector3.down, out hit, 0.35f)) {
-				isGrounded = false;
+		currentSpeed = airMoveSpeed; // Changing the move speed of the player
+		if (isGrounded) { // If the player is on the ground
+			RaycastHit hit; // Used to get information from a raycast
+			if (!Physics.Raycast (transform.position, Vector3.down, out hit, 0.35f)) { // Shooting a ray down to see it the player is not on the ground
+				isGrounded = false; // Setting the bool
 			}
 		}
-		if (other.collider.CompareTag ("Stick") && mOC) {
-			rb.velocity += mOC.velocity * 50;
-			mOC.TestForDeactivate ();
-			mOC = null;
+		if (other.collider.CompareTag ("Stick") && mOC) { // If the object left is a moving platform the player was sticking to
+			rb.velocity += mOC.velocity * 50; // Increasing the velocity of the ball
+			mOC.TestForDeactivate (); // Testing the deactivate the platform
+			mOC = null; // Removing the reference
 		}
-		if (other.collider.name.StartsWith ("Falling Platform") && fpc) {
-			fpc.Rise ();
-			fpc = null;
+		if (other.collider.name.StartsWith ("Falling Platform") && fpc) { // If the left object is a falling platform
+			fpc.Rise (); // Making the platform rise again
+			fpc = null; // Removing the reference
 		}
 	}
 }

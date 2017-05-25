@@ -30,7 +30,6 @@ GameObject:
   - component: {fileID: 11470238}
   - component: {fileID: 11441522}
   - component: {fileID: 11460352}
-  - component: {fileID: 114529701644876180}
   m_Layer: 0
   m_Name: Cube Character
   m_TagString: Player
@@ -251,6 +250,7 @@ MonoBehaviour:
   canMove: 0
   verticalVelocity: 0
   inertia: {x: 0, y: 0, z: 0}
+  lastMove: {x: 0, y: 0, z: 0}
 --- !u!114 &11473696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 114367304666591988}
   - component: {fileID: 114207773972302954}
   - component: {fileID: 114374404004408998}
-  - component: {fileID: 114090334266838878}
   m_Layer: 0
   m_Name: Pyramid Character
   m_TagString: Player
@@ -340,7 +339,6 @@ GameObject:
   - component: {fileID: 114536189927628580}
   - component: {fileID: 114230608318031566}
   - component: {fileID: 114916973271492696}
-  - component: {fileID: 114610169238172994}
   m_Layer: 0
   m_Name: Sphere Character
   m_TagString: Player
@@ -894,17 +892,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114090334266838878
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000688154376116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0696ea4b4b72ea4a9412443f4dddc3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114207773972302954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -966,10 +953,11 @@ MonoBehaviour:
   doubleJumpPower: 5
   canMove: 0
   verticalVelocity: 0
-  inertia: {x: 0, y: 0, z: 0}
   invertMovement: 0
   turning: 0
   targetRotation: 0
+  inertia: {x: 0, y: 0, z: 0}
+  lastMove: {x: 0, y: 0, z: 0}
 --- !u!114 &114374404004408998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1029,17 +1017,6 @@ MonoBehaviour:
   noClipSmoothing: 4
   camPivot: {fileID: 482902}
   player: {fileID: 477258}
---- !u!114 &114529701644876180
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0696ea4b4b72ea4a9412443f4dddc3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114536189927628580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1059,17 +1036,6 @@ MonoBehaviour:
   currentSpeed: 0
   isGrounded: 0
   rb: {fileID: 54740050690322028}
---- !u!114 &114610169238172994
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1203984775850346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0696ea4b4b72ea4a9412443f4dddc3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114680529312219168
 MonoBehaviour:
   m_ObjectHideFlags: 1

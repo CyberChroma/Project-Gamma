@@ -16,38 +16,42 @@ public class CubeAbilities : MonoBehaviour {
 	[HideInInspector] public bool isPunching; 
 
 	private Animator anim; // Reference to the animator component
-	private AnimatorStateInfo stateInfo;
-	private AnimatorStateInfo nextStateInfo;
+	private AnimatorStateInfo stateInfo; // Reference to the current animation state
+	private AnimatorStateInfo nextStateInfo; // Reference to the next animation state
 
 
 	// Use this for initialization
 	void Awake () {
 		// Setting starting values for bools
-		canMove = false;
-		canPunch = true;
+		canMove = false; // Setting the bool
+		canPunch = true; // Setting the bool
 		anim = GetComponentInChildren<Animator> (); // Getting the reference
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		stateInfo = anim.GetCurrentAnimatorStateInfo (0);
-		nextStateInfo = anim.GetNextAnimatorStateInfo (0);
+		stateInfo = anim.GetCurrentAnimatorStateInfo (0); // Getting the information
+		nextStateInfo = anim.GetNextAnimatorStateInfo (0); // Getting the information
 		if (canMove) {
 			if (punchUnlocked) { // If the player has unlocked the punch ability
 				if (canPunch && Input.GetMouseButtonDown (0)) { // If the player can punch and has pressed the left mouse button
 					Punch ();
 				}
 			}
-			if (nextStateInfo.IsName ("Punch") || stateInfo.IsName ("Punch")) {
-				isPunching = true;
-			} else {
-				isPunching = false;
+			if (nextStateInfo.IsName ("Punch") || stateInfo.IsName ("Punch")) { // If the player is punching or is about to punch
+				isPunching = true; // Setting the bool
+			} else { // (If the player is not punching)
+				isPunching = false; // Setting the bool
 			}
 		}
 	}
 
 	void Punch () { // Makes the player do a punch attack
-		anim.SetTrigger ("Punch");
+		anim.ResetTrigger ("Idle"); // Resetting the trigger
+		anim.ResetTrigger ("Moving"); // Resetting the trigger
+		anim.ResetTrigger ("Jump"); // Resetting the trigger
+		anim.ResetTrigger ("Land"); // Resetting the trigger
+		anim.SetTrigger ("Punch"); // Playing the animation
 		StartCoroutine (WaitToPunch ()); // Delay for between punches
 	}
 

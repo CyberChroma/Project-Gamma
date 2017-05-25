@@ -5,12 +5,12 @@ public class PyramidAbilities : MonoBehaviour {
 
 	public float shotDelay; // Variable for the time between ice block time shots
 	public GameObject shot; // Reference to the ice shard prefab
-	public Transform  shotParent;
+	public Transform  shotParent; // Reference to the parent of the shots
 
-	[HideInInspector] public bool canMove;
+	[HideInInspector] public bool canMove; // Whether the pyrmid can move
 	private bool canShootShot; // Bool for whether the player can shoot
-	private int numShots = 5;
-	private GameObject[] shots;
+	private int numShots = 5; // The number of shots for the object pool
+	private GameObject[] shots; // Array for the shots
 	private int nextShot;
 	private PyramidMovement pyramidMovement;
 
@@ -20,20 +20,20 @@ public class PyramidAbilities : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		// Setting starting values for bools
-		canMove = false;
-		canShootShot = true;
-		shots = new GameObject[numShots];
-		for (int i = 0; i < numShots; i++) {
-			shots [i] = Instantiate (shot, shotParent);
-			shots [i].SetActive (false);
+		canMove = false; // Setting the bool
+		canShootShot = true; // Setting the bool
+		shots = new GameObject[numShots]; // Initalizing the array
+		for (int i = 0; i < numShots; i++) { // For the number of required shots
+			shots [i] = Instantiate (shot, shotParent); // Creates the shot
+			shots [i].SetActive (false); // Turning off the shot
 		}
-		nextShot = 0;
-		pyramidMovement = GetComponent<PyramidMovement> ();
+		nextShot = 0; // The first shot should be shot first
+		pyramidMovement = GetComponent<PyramidMovement> (); // Getting the reference
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (canMove && !pyramidMovement.turning) {
+		if (canMove && !pyramidMovement.turning) { // If the player can move and isn't turning
 			if (shootShotUnlocked) { // If the player has unlocked the shoot ice block ability
 				ShootShot ();
 			}
@@ -42,12 +42,12 @@ public class PyramidAbilities : MonoBehaviour {
 
 	void ShootShot () { // Makes the player shoot the ice block
 		if (canShootShot && Input.GetKey(KeyCode.Mouse0)) { // If the player can shoot and has pressed the left mouse button
-			shots [nextShot].transform.position = transform.position; // Sets the ice shard's positon
-			shots [nextShot].transform.rotation = transform.rotation; // Sets the ice shard's rotation
-			shots [nextShot].SetActive (true); // Turns on the ice shard
-			nextShot++;
-			if (nextShot >= numShots) {
-				nextShot = 0;
+			shots [nextShot].transform.position = transform.position; // Sets the shot's positon
+			shots [nextShot].transform.rotation = transform.rotation; // Sets the shot's rotation
+			shots [nextShot].SetActive (true); // Turns on the shot
+			nextShot++; // Increase the shot number
+			if (nextShot >= numShots) { // If the end of the array has been reached
+				nextShot = 0; // Go back to the beginning of the array
 			}
 			canShootShot = false; // Disables the player's ability to shoot
 			StartCoroutine (WaitToShoot ());
