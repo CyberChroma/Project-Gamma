@@ -77,3 +77,12 @@ MonoBehaviour:
   cubeActiveMat: {fileID: 2100000, guid: 6d9ea99516175ae4eaf462502a2027a5, type: 2}
   sphereActiveMat: {fileID: 2100000, guid: 9efac1758017c2640a58d25d5c0a27fd, type: 2}
   pyramidActiveMat: {fileID: 2100000, guid: c6eedbd36bb1c1048bd74ec356f16c06, type: 2}
+  cubeActiveCheckpoint: 0
+  sphereActiveCheckpoint: 0
+  pyramidActiveCheckpoint: 0
+  cubeSpawnPos: {x: 0, y: 0, z: 0}
+  cubeSpawnRot: {x: 0, y: 0, z: 0, w: 0}
+  sphereSpawnPos: {x: 0, y: 0, z: 0}
+  sphereSpawnRot: {x: 0, y: 0, z: 0, w: 0}
+  pyramidSpawnPos: {x: 0, y: 0, z: 0}
+  pyramidSpawnRot: {x: 0, y: 0, z: 0, w: 0}

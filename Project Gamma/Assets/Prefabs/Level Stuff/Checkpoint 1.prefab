@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4905165379901570}
   - component: {fileID: 135028049883738674}
-  - component: {fileID: 114251878538432636}
   m_Layer: 0
   m_Name: Checkpoint 1
   m_TagString: Untagged
@@ -334,23 +333,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.0000002, z: 0.30000007}
   m_Center: {x: 0, y: 0, z: 0.07500001}
---- !u!114 &114251878538432636
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1416763162947944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e55a0f1a04ca82740beb4c3532f368ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cubeUnactiveMat: {fileID: 2100000, guid: 535bcef8b868579459dca11e6aafa4dc, type: 2}
-  sphereUnactiveMat: {fileID: 2100000, guid: 589ab18cb0fabf648954bb5ffd7f84c0, type: 2}
-  pyramidUnactiveMat: {fileID: 2100000, guid: 5f8b1e6684bb48b4aba0d3ff0331c887, type: 2}
-  cubeActiveMat: {fileID: 2100000, guid: 6d9ea99516175ae4eaf462502a2027a5, type: 2}
-  sphereActiveMat: {fileID: 2100000, guid: 9efac1758017c2640a58d25d5c0a27fd, type: 2}
-  pyramidActiveMat: {fileID: 2100000, guid: c6eedbd36bb1c1048bd74ec356f16c06, type: 2}
 --- !u!135 &135028049883738674
 SphereCollider:
   m_ObjectHideFlags: 1

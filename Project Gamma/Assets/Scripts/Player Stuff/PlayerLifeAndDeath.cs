@@ -16,7 +16,16 @@ public class PlayerLifeAndDeath : MonoBehaviour {
 	void Start () {
 		characterChanging = GameObject.Find ("Camera Pivot").GetComponent<CharacterChanging> (); // Getting the reference
 		checkpointManager = GameObject.Find ("Checkpoint Manager").GetComponent<CheckpointManager> (); // Getting the reference
-		checkpointManager.SetSpawn (transform, transform); // Setting the spawn position and rotation to the player's start position
+		if (gameObject == characterChanging.cube) { // If this gameobject is the cube
+			checkpointManager.cubeSpawnPos = transform.position; // Setting spawn position to start position
+			checkpointManager.cubeSpawnRot = transform.rotation; // Setting spawn rotation to start rotation
+		} else if (gameObject == characterChanging.sphere) { // If this gameobject is the sphere
+			checkpointManager.sphereSpawnPos = transform.position; // Setting spawn position to start position
+			checkpointManager.sphereSpawnRot = transform.rotation; // Setting spawn rotation to start rotation
+		} else { // (If this gameobject is the pyramid)
+			checkpointManager.pyramidSpawnPos = transform.position; // Setting spawn position to start position
+			checkpointManager.pyramidSpawnRot = transform.rotation; // Setting spawn rotation to start rotation
+		}
 		if (gameObject == characterChanging.cube) { // If this gameobject is the cube
 			cubeMovement = GetComponent<CubeMovement> (); // Getting reference
 		} else if (gameObject == characterChanging.sphere) { // If this gameobject is the sphere
@@ -33,10 +42,8 @@ public class PlayerLifeAndDeath : MonoBehaviour {
 		}
 	}
 
-	void Die () { // Kills the player
+	public void Die () { // Kills the player
 		Instantiate (deathParticles, transform.position, transform.rotation); // Creating the death particles
-		checkpointManager.Respawn (transform); // Respawns the player
-		Instantiate (spawnParticles, transform.position, transform.rotation); // Creating the spawn particles
 		if (gameObject == characterChanging.cube) { // If this gameobject is the cube
 			cubeMovement.verticalVelocity = 0; // Zeroing vertical velocity
 			cubeMovement.inertia = Vector3.zero; // Zeroing inertia
@@ -49,6 +56,9 @@ public class PlayerLifeAndDeath : MonoBehaviour {
 			pyramidMovement.inertia = Vector3.zero; // Zeroing inertia
 			pyramidMovement.lastMove = Vector3.zero; // Zeroing last move
 		}
+		checkpointManager.Respawn (transform); // Respawns the player
+		Instantiate (spawnParticles, transform.position, transform.rotation); // Creating the spawn particles
+
 	}
 	
 	void OnTriggerEnter (Collider other) {

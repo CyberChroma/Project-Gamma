@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: e4fbffff00000000
+    m_ExpandedIDs: e4fbffff00000000b8350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -417,14 +417,14 @@ MonoBehaviour:
     width: 809
     height: 475
   m_SceneLighting: 1
-  lastFramingTime: 3203.78624768
+  lastFramingTime: 4183.3202188800005
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 38.8794, y: -17.59739, z: 44.028755}
+    m_Target: {x: 8.750003, y: 18.398636, z: 3.8878117}
     speed: 2
-    m_Value: {x: 38.8794, y: -17.59739, z: 44.028755}
+    m_Value: {x: 8.750003, y: 18.398636, z: 3.8878117}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -447,13 +447,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.3076112, y: -0.22710863, z: 0.07580702, w: -0.92089653}
+    m_Target: {x: -0.2935779, y: 0.24694817, z: -0.078847736, w: -0.920115}
     speed: 2
-    m_Value: {x: -0.3076112, y: -0.22710863, z: 0.07580702, w: -0.92089653}
+    m_Value: {x: -0.2935779, y: 0.24694817, z: -0.078847736, w: -0.920115}
   m_Size:
-    m_Target: 85.43811
+    m_Target: 20.72437
     speed: 2
-    m_Value: 85.43811
+    m_Value: 20.72437
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -501,20 +501,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/Player Stuff
+    - Assets/Prefabs/Managers
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Player Stuff
+  - Assets/Prefabs/Managers
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project
     Gamma
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 171}
-    m_SelectedIDs: 68280000
-    m_LastClickedID: 10344
-    m_ExpandedIDs: 000000009e2500002e28000074280000962800002829000040430000424300004443000046430000484300004a4300004c4300004e4300005043000052430000544300005643000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 43}
+    m_SelectedIDs: 84260000
+    m_LastClickedID: 9860
+    m_ExpandedIDs: 0000000096250000242800008c2800001e2900003e43000040430000424300004443000046430000484300004a4300004c4300004e43000050430000524300005443000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,7 +542,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e2500002e28000074280000962800002829000040430000424300004443000046430000484300004a4300004c4300004e43000050430000524300005443000056430000
+    m_ExpandedIDs: 0000000096250000242800006a2800008c2800001e2900003e43000040430000424300004443000046430000484300004a4300004c4300004e430000504300005243000054430000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
