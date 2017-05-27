@@ -1,4 +1,4 @@
 # Project-Gamma
 
 Currently working on:
-  Touching up sections 1-6 of test level. Improving art of prefabs and adding more polish.
+  Improving and optimizing everything made so far (Mainly prefabs) before continuing onto section 7 of test level.
