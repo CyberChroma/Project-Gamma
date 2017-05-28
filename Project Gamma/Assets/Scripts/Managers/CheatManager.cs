@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class CheatManager : MonoBehaviour {
 	
-	public bool checkpointCheat;
+	public bool checkpointCheat; // Whether the checkpoint cheat is active
 
-	private CharacterChanging characterChanging;
-	private CameraController cameraController;
-	private CheckpointManager checkpointManager;
-	private PlayerLifeAndDeath playerLifeAndDeath;
+	private CharacterChanging characterChanging; // Reference to the character changing script
+	private CameraController cameraController; // Reference to the camera controller script
+	private CheckpointManager checkpointManager; // Reference to the checkpoint manager sctipt
+	private PlayerLifeAndDeath playerLifeAndDeath; // References to the player life and death scripts
 
 	// Use this for initialization
 	void Start () {
-		characterChanging = GameObject.Find ("Camera Pivot").GetComponent<CharacterChanging> ();
-		cameraController = GameObject.Find ("Camera Pivot").GetComponent<CameraController> ();
-		checkpointManager = GameObject.Find ("Checkpoint Manager").GetComponent<CheckpointManager> ();
+		characterChanging = GameObject.Find ("Camera Pivot").GetComponent<CharacterChanging> (); // Getting the reference
+		cameraController = GameObject.Find ("Camera Pivot").GetComponent<CameraController> (); // Getting the reference
+		checkpointManager = GameObject.Find ("Checkpoint Manager").GetComponent<CheckpointManager> (); // Getting the reference
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (checkpointCheat) {
+		if (checkpointCheat) { // If the cheat is active
 			CheckpointCheat ();
 		}
 	}
 
-	void CheckpointCheat () { // Cheat to teleport the players between checkpoints
+	void CheckpointCheat () { // Cheat to teleport the players between checkpoints using the 1 and 2 buttons
 		if (Input.GetKeyDown (KeyCode.Alpha2)) {
 			if (cameraController.activePlayer == characterChanging.cube) {
 				checkpointManager.cubeActiveCheckpoint++;

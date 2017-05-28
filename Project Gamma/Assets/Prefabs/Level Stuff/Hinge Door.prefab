@@ -92,8 +92,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.0000005, y: 2.5, z: 0.5000001}
-  m_Center: {x: -2.4999993, y: 1.25, z: 0}
+  m_Size: {x: 5.0715303, y: 3.0833392, z: 0.6250507}
+  m_Center: {x: -2.4983103, y: 1.5, z: -0.0014227483}
 --- !u!114 &114407964922540762
 MonoBehaviour:
   m_ObjectHideFlags: 1

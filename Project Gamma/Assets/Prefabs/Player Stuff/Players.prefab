@@ -226,7 +226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 156676, guid: a5ce9c283f07f8345a312d324ea1c2ba, type: 2}
   spawnParticles: {fileID: 156676, guid: a5ce9c283f07f8345a312d324ea1c2ba, type: 2}
-  characterChanging: {fileID: 114680529312219168}
 --- !u!114 &11470238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -802,7 +801,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 156676, guid: 10026edbe793ec3418ebbe394c3c3031, type: 2}
   spawnParticles: {fileID: 156676, guid: 10026edbe793ec3418ebbe394c3c3031, type: 2}
-  characterChanging: {fileID: 114680529312219168}
 --- !u!114 &114392499605425548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -901,7 +899,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 156676, guid: 0d0238f6970e8014094585186c7d76d5, type: 2}
   spawnParticles: {fileID: 156676, guid: 0d0238f6970e8014094585186c7d76d5, type: 2}
-  characterChanging: {fileID: 114680529312219168}
 --- !u!135 &135132816395007464
 SphereCollider:
   m_ObjectHideFlags: 1

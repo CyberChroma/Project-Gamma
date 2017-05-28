@@ -8,7 +8,7 @@ public class PauseManager : MonoBehaviour {
 	public GameObject pauseScreen; // Reference to the pause screen panel
 	public GameObject controlsScreen; // Reference to the control screen panel
 
-	private bool isPaused; // Bool for if the game is paused
+	[HideInInspector] public bool isPaused; // Bool for if the game is paused
 
 	// Use this for initialization
 	void Start () {
