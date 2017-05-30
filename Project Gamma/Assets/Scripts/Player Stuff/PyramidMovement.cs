@@ -66,17 +66,18 @@ public class PyramidMovement : MonoBehaviour {
 	void FixedUpdate () {
 		stateInfo = anim.GetCurrentAnimatorStateInfo (0); // Getting the information
 		if (inputH == 0 && controller.isGrounded) { // If the player is not moving and is not on the ground
-			if (!stateInfo.IsName ("Idle") && !anim.IsInTransition (0)) { // If the player is not in the idle animation
+			if (stateInfo.IsName ("Moving") && !stateInfo.IsName ("Idle") && !anim.IsInTransition (0)) { // If the player is not in the idle animation
 				anim.SetTrigger ("Idle"); // Setting the trigger
 			}
 		} else { // (If the player is moving and/or is in the air)
-			if (!stateInfo.IsName ("Moving") && !anim.IsInTransition (0)) { // If the player is not in the move animation
+			if (stateInfo.IsName ("Idle") && !stateInfo.IsName ("Moving") && !anim.IsInTransition (0)) { // If the player is not in the move animation
 				anim.SetTrigger ("Moving"); // Setting the trigger
 			}
 		}
 		if (!wasOnGround && controller.isGrounded) { // If the player is on the ground and wasn't last frame
 			canJump = true; // Setting the bool
 			wasOnGround = true; // Setting the bool
+			verticalVelocity = -1f; // Lowering vertical velocity
 			if (!stateInfo.IsName ("Land")) { // If the player is not in the land animation
 				anim.ResetTrigger ("Idle"); // Resetting the trigger
 				anim.ResetTrigger ("Moving"); // Resetting the trigger
@@ -123,10 +124,10 @@ public class PyramidMovement : MonoBehaviour {
 				moveVector += inertia; // Adding inertia
 				moveVector /= 2; // Slowing speed
 			}
-			moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 			if (mOC && mOC.isActive) { // If the player has a reference to the moving object controller
 				moveVector += mOC.velocity; // Adding velocity of platform so the move together
 			}
+			moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 			controller.Move (moveVector); // Applying the movement
 			lastMove = moveVector; // Storing the move
 		} else { // (If the movement is being stored)

@@ -233,6 +233,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114536189927628580, guid: 43374825ae15a9449862e8129eb47c12,
+        type: 2}
+      propertyPath: velocityDecreaseRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43374825ae15a9449862e8129eb47c12, type: 2}
   m_IsPrefabParent: 0
@@ -7207,7 +7212,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.9355508, b: 0.60784316, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.75
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -13622,7 +13627,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.6777542, g: 0.60784316, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

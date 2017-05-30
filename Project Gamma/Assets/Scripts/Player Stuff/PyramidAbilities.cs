@@ -14,7 +14,7 @@ public class PyramidAbilities : MonoBehaviour {
 
 	private PyramidMovement pyramidMovement;
 	private Animator anim; // Reference to the animator component
-	private AnimatorStateInfo stateInfo; // Reference to the current animation state
+
 	// Use this for initialization
 	void Awake () {
 		// Setting starting values for bools
@@ -26,7 +26,6 @@ public class PyramidAbilities : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		stateInfo = anim.GetCurrentAnimatorStateInfo (0); // Getting the information
 		if (canMove && !pyramidMovement.turning) { // If the player can move and isn't turning
 			if (shootShotUnlocked) { // If the player has unlocked the shoot ice block ability
 				Shoot ();
