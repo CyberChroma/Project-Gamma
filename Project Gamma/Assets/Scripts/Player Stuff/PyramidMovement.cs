@@ -124,17 +124,20 @@ public class PyramidMovement : MonoBehaviour {
 				moveVector += inertia; // Adding inertia
 				moveVector /= 2; // Slowing speed
 			}
+			moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 			if (mOC && mOC.isActive) { // If the player has a reference to the moving object controller
 				moveVector += mOC.velocity; // Adding velocity of platform so the move together
+				if (mOC.velocity.y > 0) {
+					moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
+				}
 			}
-			moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 			controller.Move (moveVector); // Applying the movement
 			lastMove = moveVector; // Storing the move
 		} else { // (If the movement is being stored)
+			lastMove.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 			if (mOC && mOC.isActive) { // If the player has a reference to the moving object controller
 				lastMove += mOC.velocity; // Adding velocity of platform so the move together
 			}
-			lastMove.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 			controller.Move (lastMove); // Applying the movement
 		}
 	}
