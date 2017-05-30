@@ -108,8 +108,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25000006, z: 0.5000001}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.1679564, y: 0.16795644, z: 0.3585741}
+  m_Center: {x: 0, y: 0, z: -0.020713007}
 --- !u!114 &114926260388096572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -123,3 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   lifetime: 1.5
+  spawnExplosion: {fileID: 156676, guid: 75fe83d2cb155284fb9684d0eb7a8e33, type: 2}
+  deathExplosion: {fileID: 156676, guid: 75fe83d2cb155284fb9684d0eb7a8e33, type: 2}

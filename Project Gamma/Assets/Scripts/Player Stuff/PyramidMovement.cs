@@ -23,9 +23,11 @@ public class PyramidMovement : MonoBehaviour {
 	private bool canJump; // Whether the player can jump
 	private bool canDoubleJump; // Bool for whether the player can double jump
 	private bool storeMovement; // Whether the force from the last frame should be applied
+	private CharacterController controller; // Reference to the character controller
+	private Animator anim; // Reference to the animator component
+	private AnimatorStateInfo stateInfo; // Reference to the current animation state
 	private MovingObjectController mOC; // Temporary reference to a moving object controller script
 	private FallingPlatformController fpc; // Temporary reference to a falling platform controller script
-	private CharacterController controller; // Reference to the character controller
 
 	// Input variables
 	private float inputH;
@@ -41,6 +43,7 @@ public class PyramidMovement : MonoBehaviour {
 		turning = false; // Setting the bool
 		targetRotation = transform.rotation.eulerAngles.y; // Setting the target rotation to the player's start rotation
 		controller = GetComponent<CharacterController> (); // Getting the reference
+		anim = GetComponentInChildren<Animator> (); // Getting the reference
 	}
 
 	void Update () {
@@ -61,9 +64,24 @@ public class PyramidMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		stateInfo = anim.GetCurrentAnimatorStateInfo (0); // Getting the information
+		if (inputH == 0 && controller.isGrounded) { // If the player is not moving and is not on the ground
+			if (!stateInfo.IsName ("Idle") && !anim.IsInTransition (0)) { // If the player is not in the idle animation
+				anim.SetTrigger ("Idle"); // Setting the trigger
+			}
+		} else { // (If the player is moving and/or is in the air)
+			if (!stateInfo.IsName ("Moving") && !anim.IsInTransition (0)) { // If the player is not in the move animation
+				anim.SetTrigger ("Moving"); // Setting the trigger
+			}
+		}
 		if (!wasOnGround && controller.isGrounded) { // If the player is on the ground and wasn't last frame
 			canJump = true; // Setting the bool
 			wasOnGround = true; // Setting the bool
+			if (!stateInfo.IsName ("Land")) { // If the player is not in the land animation
+				anim.ResetTrigger ("Idle"); // Resetting the trigger
+				anim.ResetTrigger ("Moving"); // Resetting the trigger
+				anim.SetTrigger ("Land"); // Setting the trigger
+			}
 		} else if (wasOnGround && !controller.isGrounded) { // If the player has just left the ground
 			if (mOC) { // If the player has a reference to the moving object controller
 				mOC.TestForDeactivate (); // Tests to deactivate the platform
@@ -127,6 +145,9 @@ public class PyramidMovement : MonoBehaviour {
 			canJump = false; // Setting the bool
 			canDoubleJump = true; // Setting the bool
 			wasOnGround = false; // Setting the bool
+			if (!stateInfo.IsName ("Jump")) { // If the jump animation is not playing
+				anim.SetTrigger ("Jump"); // Setting the trigger
+			}
 			if (mOC) { // If the player has a reference to the moving object controller
 				mOC.TestForDeactivate (); // Tests to deactivate the platform
 				mOC = null; // Removing the reference
@@ -143,6 +164,9 @@ public class PyramidMovement : MonoBehaviour {
 			verticalVelocity = doubleJumpPower; // Applying the double jump force
 			inertia = lastMove; // Setting inertia
 			canDoubleJump = false; // Disabling the ability to jump again until they hit the ground
+			if (!stateInfo.IsName ("Jump")) { // If the jump animation is not playing
+				anim.SetTrigger ("Jump"); // Setting the trigger
+			}
 		}
 	}
 

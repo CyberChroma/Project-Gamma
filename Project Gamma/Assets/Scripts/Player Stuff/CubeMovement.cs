@@ -22,11 +22,12 @@ public class CubeMovement : MonoBehaviour {
 	private bool wasOnGround; // Whether the player was on the ground last frame
 	private bool canJump; // If the player can jump
 	private bool storeMovement; // Whether the force from the last frame should be applied
-	private MovingObjectController mOC; // Temporary reference to a moving object controller script
-	private FallingPlatformController fpc; // Temporary reference to a falling platform controller script
 	private CharacterController controller; // Reference to the character controller
 	private Animator anim; // Reference to the animator component
 	private AnimatorStateInfo stateInfo; // Reference to the current animation state
+	private MovingObjectController mOC; // Temporary reference to a moving object controller script
+	private FallingPlatformController fpc; // Temporary reference to a falling platform controller script
+
 
 	// Input variables
 	private float inputV;
@@ -68,7 +69,7 @@ public class CubeMovement : MonoBehaviour {
 				anim.SetTrigger ("Idle"); // Setting the trigger
 			}
 		} else { // (If the player is moving and/or is in the air)
-			if (!stateInfo.IsName ("Moving") && !anim.IsInTransition (0)) { // If the player is not in the move animation
+			if (stateInfo.IsName ("Idle") && !stateInfo.IsName ("Moving") && !anim.IsInTransition (0)) { // If the player is not in the move animation
 				anim.SetTrigger ("Moving"); // Setting the trigger
 			}
 		}

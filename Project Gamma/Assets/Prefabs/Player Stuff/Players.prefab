@@ -295,8 +295,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4083643614410356}
-  - component: {fileID: 33314291164604812}
-  - component: {fileID: 23833504823182878}
   - component: {fileID: 143463156796321762}
   - component: {fileID: 114367304666591988}
   - component: {fileID: 114207773972302954}
@@ -343,6 +341,24 @@ GameObject:
   m_Layer: 0
   m_Name: MoveDirection
   m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1386798467438736
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4336393580435446}
+  - component: {fileID: 33189768342858568}
+  - component: {fileID: 23922219535106498}
+  - component: {fileID: 95987089112154236}
+  m_Layer: 0
+  m_Name: Pyramid Object
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,8 +422,8 @@ GameObject:
   - component: {fileID: 33727835251878102}
   - component: {fileID: 23605578163672910}
   - component: {fileID: 95442861369760470}
-  - component: {fileID: 65852691255448502}
   - component: {fileID: 114269784181883054}
+  - component: {fileID: 65852691255448502}
   - component: {fileID: 54483720930250264}
   m_Layer: 0
   m_Name: Cube Object
@@ -451,7 +467,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 75, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4336393580435446}
   m_Father: {fileID: 481530}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -480,6 +497,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 482902}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4336393580435446
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386798467438736}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4083643614410356}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4757680805159964
 Transform:
@@ -603,12 +633,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23833504823182878
+--- !u!23 &23922219535106498
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000688154376116}
+  m_GameObject: {fileID: 1386798467438736}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -635,13 +665,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33314291164604812
+--- !u!33 &33189768342858568
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000688154376116}
-  m_Mesh: {fileID: 4300000, guid: 2d4f1e496d09113428f14b9a701b7cf5, type: 3}
+  m_GameObject: {fileID: 1386798467438736}
+  m_Mesh: {fileID: 4300002, guid: 2d4f1e496d09113428f14b9a701b7cf5, type: 3}
 --- !u!33 &33358175539945932
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -722,6 +752,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95987089112154236
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1386798467438736}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 2d4f1e496d09113428f14b9a701b7cf5, type: 3}
+  m_Controller: {fileID: 9100000, guid: 6a7ef4c76c48f7949ae6455019396ddf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114207773972302954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -735,7 +782,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotDelay: 0.5
   shot: {fileID: 1374828447952638, guid: 1db4f9ad222faf84eb87bcc29825a2f4, type: 2}
-  shotParent: {fileID: 0}
   canMove: 0
   shootShotUnlocked: 1
 --- !u!114 &114230608318031566

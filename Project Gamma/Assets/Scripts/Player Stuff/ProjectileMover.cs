@@ -5,6 +5,8 @@ public class ProjectileMover : MonoBehaviour {
 
 	public float moveSpeed; // The speed of the object
 	public float lifetime; // The lifetime of the object
+	public GameObject spawnExplosion;
+	public GameObject deathExplosion;
 
 	private Rigidbody rb; // Reference to the rigidbody component
 
@@ -14,6 +16,7 @@ public class ProjectileMover : MonoBehaviour {
 	}
 
 	void OnEnable () {
+		Instantiate (spawnExplosion, transform.position, transform.rotation);
 		StartCoroutine ("Disable");
 	}
 
@@ -28,7 +31,8 @@ public class ProjectileMover : MonoBehaviour {
 
 	IEnumerator Disable () { // Deactivating it after a certain number of seconds
 		yield return new WaitForSeconds (lifetime);
-		gameObject.SetActive (false);
+		Instantiate (deathExplosion, transform.position, transform.rotation);
+		Destroy (gameObject); // Destroying the gameobject
 	}
 
 	void OnTriggerEnter (Collider other) {
@@ -36,7 +40,8 @@ public class ProjectileMover : MonoBehaviour {
 			if (other.CompareTag ("Button-Pyramid")) { // If the projectile collided with a pyramid button
 				other.GetComponent<ButtonController> ().Activate (); // Activate the button
 			}
-			gameObject.SetActive (false); // Disables the gameobject
+			Instantiate (deathExplosion, transform.position, transform.rotation);
+			Destroy (gameObject); // Destroying the gameobject
 		}
 	}
 }
