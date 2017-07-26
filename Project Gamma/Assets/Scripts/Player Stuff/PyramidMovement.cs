@@ -130,6 +130,11 @@ public class PyramidMovement : MonoBehaviour {
 				if (mOC.velocity.y > 0) {
 					moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
 				}
+			} else if (fpc && controller.isGrounded) {
+				moveVector += fpc.velocity;
+				if (fpc.velocity.y > 0) {
+					moveVector.y = verticalVelocity * Time.deltaTime; // Adding vertical velocity
+				}
 			}
 			controller.Move (moveVector); // Applying the movement
 			lastMove = moveVector; // Storing the move
@@ -168,8 +173,8 @@ public class PyramidMovement : MonoBehaviour {
 			verticalVelocity = doubleJumpPower; // Applying the double jump force
 			inertia = lastMove; // Setting inertia
 			canDoubleJump = false; // Disabling the ability to jump again until they hit the ground
-			if (!stateInfo.IsName ("Jump")) { // If the jump animation is not playing
-				anim.SetTrigger ("Jump"); // Setting the trigger
+			if (!stateInfo.IsName ("Double Jump")) { // If the jump animation is not playing
+				anim.SetTrigger ("Double Jump"); // Setting the trigger
 			}
 		}
 	}

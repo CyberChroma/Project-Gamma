@@ -11,6 +11,7 @@ public class FallingPlatformController : MonoBehaviour {
 	private bool falling; // Whether the platform is currently falling
 	private float startHeight; // The start height of the platform
 	private Rigidbody rb; // Reference to the rigidbody
+	[HideInInspector] public Vector3 velocity;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,7 @@ public class FallingPlatformController : MonoBehaviour {
 				rb.velocity = Vector3.up * riseSpeed; // Moving the platform by changing its velocity
 			}
 		}
+		velocity = rb.velocity / 50; // Calculating the velocity
 	}
 
 	public void Fall () {
