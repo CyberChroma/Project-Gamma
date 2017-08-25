@@ -1,4 +1,4 @@
-Initialize engine version: 5.6.0f3 (497a0f351392)
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -15,14 +15,15 @@ Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Projec
 Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  1.003 seconds
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.dll (this message is harmless)
-desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
+Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.280 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 19.628801 ms
+UnloadTime: 1.592748 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1b1c -> priority: 1 
-  Thread -> id: 2110 -> priority: 1 
+  Thread -> id: 2670 -> priority: 1 
+  Thread -> id: 2634 -> priority: 1 

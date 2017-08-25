@@ -45,9 +45,7 @@ public class PlayerLifeAndDeath : MonoBehaviour {
 	public void Die () { // Kills the player
 		Instantiate (deathParticles, transform.position, transform.rotation); // Creating the death particles
 		if (gameObject == characterChanging.cube) { // If this gameobject is the cube
-			cubeMovement.verticalVelocity = 0; // Zeroing vertical velocity
-			cubeMovement.inertia = Vector3.zero; // Zeroing inertia
-			cubeMovement.lastMove = Vector3.zero; // Zeroing last move
+			cubeMovement.rb.velocity = Vector3.zero;
 		} else if (gameObject == characterChanging.sphere) { // If this gameobject is the sphere
 			sphereMovement.rb.velocity = Vector3.zero; // Zeroing velocity
 			sphereMovement.rb.angularVelocity = Vector3.zero; // Zeroing the angular velocity

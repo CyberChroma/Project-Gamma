@@ -19,7 +19,6 @@ public class CubeAbilities : MonoBehaviour {
 	private AnimatorStateInfo stateInfo; // Reference to the current animation state
 	private AnimatorStateInfo nextStateInfo; // Reference to the next animation state
 
-
 	// Use this for initialization
 	void Awake () {
 		// Setting starting values for bools
@@ -53,6 +52,16 @@ public class CubeAbilities : MonoBehaviour {
 		anim.ResetTrigger ("Land"); // Resetting the trigger
 		anim.SetTrigger ("Punch"); // Playing the animation
 		StartCoroutine (WaitToPunch ()); // Delay for between punches
+	}
+
+	void OnCollisionStay (Collision other) {
+		if (isPunching) { // If the cube is punching
+			if (other.collider.CompareTag ("Breakable")) { // If the player collided with a breakable wall
+				other.collider.GetComponentInChildren<Animator> ().SetTrigger ("Activate"); // Activates the animation
+			} else if (other.collider.CompareTag ("Button-Cube")) { // If the player collided with a button
+				other.collider.GetComponent<ButtonController> ().Activate (); // Activate the button
+			}
+		}
 	}
 
 	IEnumerator WaitToPunch () { // Makes a delay for when the player can punch again

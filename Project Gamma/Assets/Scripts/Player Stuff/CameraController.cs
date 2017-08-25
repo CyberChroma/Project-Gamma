@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour {
 		transform.position = activePlayer.transform.position; // Moving the camera pivot to the player's position
 		transform.rotation = activePlayer.transform.rotation; // Rotating the camera pivot to behind the player
 		rb = GetComponent <Rigidbody> (); // Getting the reference
-		pyramidMovement = characterChanging.pyramid.GetComponent<PyramidMovement> ();
+		pyramidMovement = characterChanging.pyramid.GetComponent<PyramidMovement> (); // Getting the reference
 	}
 	
 	// Update is called once per frame
@@ -66,9 +66,6 @@ public class CameraController : MonoBehaviour {
 				rotationY += 360; // Adds 360 to the y rotation
 			}
 			rotationY = Mathf.Clamp (rotationY, characterChanging.pyramid.transform.rotation.eulerAngles.y - 170, characterChanging.pyramid.transform.rotation.eulerAngles.y - 10); // Clamping the rotation
-		}
-		if (Input.GetMouseButton (2) && activePlayer == characterChanging.cube) { // If the active player is the cube and the player presses the middle mouse button
-			rotationY = activePlayer.transform.rotation.eulerAngles.y; // Center the camera behind the player
 		}
 		if (Input.GetMouseButtonDown (2) && activePlayer == characterChanging.pyramid && !pyramidMovement.turning) { // If the active player is the pyramid and the player presses the middle mouse button and the pyramid is not turning
 			pyramidMovement.turning = true; // Setting the bool

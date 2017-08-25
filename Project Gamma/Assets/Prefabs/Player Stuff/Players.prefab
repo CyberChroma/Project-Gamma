@@ -26,10 +26,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 477258}
-  - component: {fileID: 143125025907965236}
-  - component: {fileID: 11470238}
+  - component: {fileID: 114637417898765450}
   - component: {fileID: 11441522}
   - component: {fileID: 11460352}
+  - component: {fileID: 54987028453514890}
+  - component: {fileID: 65849259407633488}
   m_Layer: 0
   m_Name: Cube Character
   m_TagString: Player
@@ -95,7 +96,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4066949156207516}
-  - {fileID: 4040080049696846}
   m_Father: {fileID: 481530}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,30 +226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 156676, guid: a5ce9c283f07f8345a312d324ea1c2ba, type: 2}
   spawnParticles: {fileID: 156676, guid: a5ce9c283f07f8345a312d324ea1c2ba, type: 2}
---- !u!114 &11470238
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b9a7c1e490d8a04db6944db209d7b41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4.5
-  rotSpeed: 20
-  gravity: 10
-  jumpPower: 6
-  wallJumpVSpeedUp: 5
-  wallJumpVSpeedSide: 4
-  wallJumpHSpeedForward: 4
-  wallJumpHSpeedSide: 4
-  wallJumpHSpeedUp: 4
-  canMove: 0
-  verticalVelocity: 0
-  inertia: {x: 0, y: 0, z: 0}
-  lastMove: {x: 0, y: 0, z: 0}
 --- !u!114 &11473696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -324,23 +300,6 @@ GameObject:
   m_Layer: 0
   m_Name: Sphere Character
   m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1322276178142934
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4040080049696846}
-  - component: {fileID: 33358175539945932}
-  - component: {fileID: 23350861124300668}
-  m_Layer: 0
-  m_Name: MoveDirection
-  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -432,19 +391,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4040080049696846
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1322276178142934}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0, y: 0, z: 0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 477258}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 90, z: 0}
 --- !u!4 &4066949156207516
 Transform:
   m_ObjectHideFlags: 1
@@ -537,38 +483,6 @@ Transform:
   m_Father: {fileID: 482902}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23350861124300668
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1322276178142934}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: e796d7f4f0b62704c9e7c00aa8ac1022, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23523145639167260
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -672,13 +586,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386798467438736}
   m_Mesh: {fileID: 4300002, guid: 2d4f1e496d09113428f14b9a701b7cf5, type: 3}
---- !u!33 &33358175539945932
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1322276178142934}
-  m_Mesh: {fileID: 4300006, guid: 19ea9b2e464ef60488c542be91ab079b, type: 3}
 --- !u!33 &33727835251878102
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -723,6 +630,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &54987028453514890
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142350}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0.5
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &65849259407633488
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65852691255448502
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -903,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a8de6b0222a79449047096c7b3af11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 8
   airMoveSpeed: 4
   velocityDecreaseRate: 1
   camPivot: {fileID: 482902}
@@ -911,6 +845,25 @@ MonoBehaviour:
   currentSpeed: 0
   isGrounded: 0
   rb: {fileID: 54740050690322028}
+--- !u!114 &114637417898765450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df8fb7b1447252438793a3d8657cb0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
+  rotSmoothing: 0.15
+  jumpPower: 3.5
+  slopeLimit: 30
+  wallJumpPowerU: 2.5
+  wallJumpPowerF: 2
+  canMove: 0
+  rb: {fileID: 0}
 --- !u!114 &114680529312219168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -957,23 +910,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: -0.00000014901161, z: 0}
---- !u!143 &143125025907965236
-CharacterController:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 142350}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.5
-  m_Radius: 0.25
-  m_SlopeLimit: 30
-  m_StepOffset: 0.1
-  m_SkinWidth: 0.001
-  m_MinMoveDistance: 0.01
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143463156796321762
 CharacterController:
   m_ObjectHideFlags: 1

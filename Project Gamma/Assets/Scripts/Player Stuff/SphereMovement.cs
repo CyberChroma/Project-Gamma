@@ -25,20 +25,20 @@ public class SphereMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (canMove) { // If the player can move
-			float h = Input.GetAxis ("Horizontal"); // Getting input from the left and right arrow keys (or a and d)
-			float v = Input.GetAxis ("Vertical"); // Getting input from the up and down arrow keys (or w and s)
-			Move (h, v);
+			float inputH = Input.GetAxis ("Horizontal"); // Getting input from the left and right arrow keys (or a and d)
+			float inputV = Input.GetAxis ("Vertical"); // Getting input from the up and down arrow keys (or w and s)
+			Move (inputH, inputV);
 		} else { // (If the player cannot move)
 			rb.velocity = new Vector3 (Mathf.Lerp (rb.velocity.x, 0, velocityDecreaseRate / 10), rb.velocity.y, Mathf.Lerp (rb.velocity.z, 0, velocityDecreaseRate / 10)); // Slowing the player
 		}
 	}
 
-	void Move (float h, float v) { // Moves the sphere
+	void Move (float inputH, float inputV) { // Moves the sphere
 		if (mOC && mOC.isActive) { // If the player has a reference to a moving object controller
 			rb.position = (rb.position + mOC.velocity); // Adding to velocity to make the player follow the platform
 		}
-		Vector3 force = camPivot.right * h + camPivot.forward * v; // Variable for force
-		force = new Vector3(force.x, 0, force.z).normalized * currentSpeed; // Calculating force
+		Vector3 force = Vector3.ProjectOnPlane(camPivot.right, Vector3.up).normalized * inputH + Vector3.ProjectOnPlane(camPivot.forward, Vector3.up).normalized * inputV; // Variable for force
+		force *= currentSpeed; // Calculating force
 		rb.AddForce (force); // Applying the force
 		if (Input.GetKey (KeyCode.Space)) { // If the player presses the space button
 			rb.velocity = new Vector3 (Mathf.Lerp (rb.velocity.x, 0, velocityDecreaseRate / 10), rb.velocity.y, Mathf.Lerp (rb.velocity.z, 0, velocityDecreaseRate / 10)); // Slows the player down

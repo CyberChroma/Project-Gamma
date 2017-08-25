@@ -15,14 +15,14 @@ Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Projec
 Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.6_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.6_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.6_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.028 seconds
+- Completed reload, in  6.090 seconds
 Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.6_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.6_Data\Managed\System.dll (this message is harmless)
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.717763 ms
+UnloadTime: 71.244316 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2944 -> priority: 1 
-  Thread -> id: 850 -> priority: 1 
+  Thread -> id: 2a74 -> priority: 1 
+  Thread -> id: 23c4 -> priority: 1 
