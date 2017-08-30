@@ -104,6 +104,7 @@ public class CubeMovement : MonoBehaviour {
 				mOC.TestForDeactivate (); // Tests to deactivate the platform
 				mOC = null; // Removing the reference
 			}
+			inputJ = false; // Setting the bool
 			isGrounded = false; // Setting the bool
 			canJump = false; // Setting the bool
 		}
@@ -132,7 +133,7 @@ public class CubeMovement : MonoBehaviour {
 			isGrounded = true; // Setting the bool
 			canJump = true; // Setting the bools
 		}
-		if (inputJ && !canJump && !isGrounded) { // If the player presses the space bar and are not on the ground
+		if (Vector3.Angle (Vector3.up, other.contacts [0].normal) <= 100 && Vector3.Angle (Vector3.up, other.contacts [0].normal) >= 80 && inputJ && !canJump && !isGrounded) { // If the player presses the space bar and are not on the ground
 			WallJump (other.contacts [0].normal);
 		}
 	}
@@ -159,9 +160,10 @@ public class CubeMovement : MonoBehaviour {
 	}
 
 	void WallJump (Vector3 normal) {
-		lookDir = Vector3.ProjectOnPlane(normal, Vector3.up); // Turning the player to face away from the wall
+		inputJ = false;
 		rb.velocity = Vector3.zero; // Resetting the velocity
-		rb.AddForce (Vector3.ProjectOnPlane(normal, Vector3.up) * wallJumpPowerF * 100 + Vector3.up * wallJumpPowerU * 100); // Pushing the player up
+		lookDir = Vector3.ProjectOnPlane(normal, Vector3.up); // Turning the player to face away from the wall
+		rb.AddForce (Vector3.ProjectOnPlane(normal, Vector3.up) * wallJumpPowerF * 100 + Vector3.up * wallJumpPowerU * 100); // Pushing the player up and away from the wall
 		anim.SetTrigger ("Jump"); // Setting the trigger
 		StartCoroutine (TempDisable (0.25f));
 	}

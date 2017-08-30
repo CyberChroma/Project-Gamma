@@ -130,7 +130,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1766969326618604
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,10 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'W or S - Move Cube
-
-
-    A or D - Turn Cube
+  m_Text: 'W, A, S, D - Move Cube
 
 
     Space - Jump
@@ -300,7 +297,7 @@ MonoBehaviour:
   m_Text: 'W, A, S, D - Move Sphere
 
 
-    Left Shift - Break
+    Space - Jump
 
 
     Left Mouse - Bounce/Slam'
