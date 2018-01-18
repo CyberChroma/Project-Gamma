@@ -16,8 +16,12 @@ public class BoostController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		sphereRb = GameObject.Find ("Players/Sphere Character").GetComponent<Rigidbody> (); // Getting the reference to the sphere's rigidbody
-		sphereMovement = sphereRb.GetComponent<SphereMovement> (); // Getting the reference to the sphere's movement script
+		if (GameObject.Find ("Sphere Character")) {
+			sphereRb = GameObject.Find ("Sphere Character").GetComponent<Rigidbody> (); // Getting the reference to the sphere's rigidbody
+			sphereMovement = sphereRb.GetComponent<SphereMovement> (); // Getting the reference to the sphere's movement script
+		} else {
+			enabled = false;
+		}
 		arrowsMat = transform.Find ("Arrows").GetComponent<MeshRenderer> (); // Getting the reference to the mesh renderer of the arrows
 		if (activated) { // If the boost starts activated
 			arrowsMat.material = arrowsActiveMat; // Setting the material

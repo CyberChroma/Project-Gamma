@@ -1,0 +1,548 @@
+fileFormatVersion: 2
+guid: 69021905a7638484eae13f4c3e9119ec
+timeCreated: 1465747901
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cube_Object
+    100004: Cube
+    100006: Cube_Character
+    100008: Cube_Character_001
+    100010: Cube_Character_002
+    100012: Body
+    100014: Bone_011
+    100016: Bone_012
+    100018: Bone_013
+    100020: Bone_014
+    100022: Bone_015
+    100024: Bone_016
+    100026: Bone_017
+    100028: Bone_018
+    100030: Bone_019
+    100032: Bone_020
+    100034: Bone_021
+    100036: Bone_022
+    100038: Bone_023
+    100040: Bone_024
+    100042: CubeRig
+    100044: foot_L
+    100046: forearm_L
+    100048: Head
+    100050: shin_L
+    100052: thigh_L
+    100054: upperArm_L
+    100056: foot_L_001
+    100058: finger_L
+    100060: finger_L_001
+    100062: finger_L_002
+    100064: finger_L_004
+    100066: finger_L_005
+    100068: finger_L_006
+    100070: finger_L_008
+    100072: finger_L_009
+    100074: finger_L_010
+    100076: finger_L_012
+    100078: finger_L_013
+    100080: finger_L_014
+    100082: body
+    100084: Cube_Character-Old
+    100086: Cube_Character_Copy
+    100088: CubeRig_Copy
+    100090: finger_L_0
+    100092: finger_L_10
+    100094: finger_L_11
+    100096: finger_L_13
+    100098: finger_L_14
+    100100: finger_L_15
+    100102: finger_L_2
+    100104: finger_L_3
+    100106: finger_L_5
+    100108: finger_L_6
+    100110: finger_L_7
+    100112: finger_L_9
+    100114: finger_R
+    100116: finger_R_0
+    100118: finger_R_001
+    100120: finger_R_002
+    100122: finger_R_004
+    100124: finger_R_005
+    100126: finger_R_006
+    100128: finger_R_008
+    100130: finger_R_009
+    100132: finger_R_010
+    100134: finger_R_012
+    100136: finger_R_013
+    100138: finger_R_014
+    100140: finger_R_10
+    100142: finger_R_11
+    100144: finger_R_13
+    100146: finger_R_14
+    100148: finger_R_15
+    100150: finger_R_2
+    100152: finger_R_3
+    100154: finger_R_5
+    100156: finger_R_6
+    100158: finger_R_7
+    100160: finger_R_9
+    100162: foot_L_0
+    100164: foot_L_2
+    100166: foot_R
+    100168: foot_R_0
+    100170: foot_R_001
+    100172: foot_R_2
+    100174: forearm_L_0
+    100176: forearm_R
+    100178: forearm_R_0
+    100180: Nose
+    100182: nose
+    100184: shin_L_0
+    100186: shin_R
+    100188: shin_R_0
+    100190: thigh_L_0
+    100192: thigh_R
+    100194: thigh_R_0
+    100196: thumb_L
+    100198: thumb_L_001
+    100200: thumb_R
+    100202: thumb_R_001
+    100204: upperArm_L_0
+    100206: upperArm_R
+    100208: upperArm_R_0
+    400000: //RootNode
+    400002: Cube_Object
+    400004: Cube
+    400006: Cube_Character
+    400008: Cube_Character_001
+    400010: Cube_Character_002
+    400012: Body
+    400014: Bone_011
+    400016: Bone_012
+    400018: Bone_013
+    400020: Bone_014
+    400022: Bone_015
+    400024: Bone_016
+    400026: Bone_017
+    400028: Bone_018
+    400030: Bone_019
+    400032: Bone_020
+    400034: Bone_021
+    400036: Bone_022
+    400038: Bone_023
+    400040: Bone_024
+    400042: CubeRig
+    400044: foot_L
+    400046: forearm_L
+    400048: Head
+    400050: shin_L
+    400052: thigh_L
+    400054: upperArm_L
+    400056: foot_L_001
+    400058: finger_L
+    400060: finger_L_001
+    400062: finger_L_002
+    400064: finger_L_004
+    400066: finger_L_005
+    400068: finger_L_006
+    400070: finger_L_008
+    400072: finger_L_009
+    400074: finger_L_010
+    400076: finger_L_012
+    400078: finger_L_013
+    400080: finger_L_014
+    400082: body
+    400084: Cube_Character-Old
+    400086: Cube_Character_Copy
+    400088: CubeRig_Copy
+    400090: finger_L_0
+    400092: finger_L_10
+    400094: finger_L_11
+    400096: finger_L_13
+    400098: finger_L_14
+    400100: finger_L_15
+    400102: finger_L_2
+    400104: finger_L_3
+    400106: finger_L_5
+    400108: finger_L_6
+    400110: finger_L_7
+    400112: finger_L_9
+    400114: finger_R
+    400116: finger_R_0
+    400118: finger_R_001
+    400120: finger_R_002
+    400122: finger_R_004
+    400124: finger_R_005
+    400126: finger_R_006
+    400128: finger_R_008
+    400130: finger_R_009
+    400132: finger_R_010
+    400134: finger_R_012
+    400136: finger_R_013
+    400138: finger_R_014
+    400140: finger_R_10
+    400142: finger_R_11
+    400144: finger_R_13
+    400146: finger_R_14
+    400148: finger_R_15
+    400150: finger_R_2
+    400152: finger_R_3
+    400154: finger_R_5
+    400156: finger_R_6
+    400158: finger_R_7
+    400160: finger_R_9
+    400162: foot_L_0
+    400164: foot_L_2
+    400166: foot_R
+    400168: foot_R_0
+    400170: foot_R_001
+    400172: foot_R_2
+    400174: forearm_L_0
+    400176: forearm_R
+    400178: forearm_R_0
+    400180: Nose
+    400182: nose
+    400184: shin_L_0
+    400186: shin_R
+    400188: shin_R_0
+    400190: thigh_L_0
+    400192: thigh_R
+    400194: thigh_R_0
+    400196: thumb_L
+    400198: thumb_L_001
+    400200: thumb_R
+    400202: thumb_R_001
+    400204: upperArm_L_0
+    400206: upperArm_R
+    400208: upperArm_R_0
+    2100000: Cube_Character
+    2100002: Cube_Character-Skin
+    2100004: Cube_Character-Shirt
+    2100006: Cube_Character-Pants
+    2100008: Cube_Character-Shoes
+    2100010: Cube_Character-Hair
+    2100012: Cube_Character-Eyes
+    2100014: Cube_Character-Mouth
+    2100016: Cube_Character-Tongue
+    2100018: Cube_Character-Teeth
+    2100020: Cube_Character-Pupil
+    2100022: unnamed
+    2100024: Cube_Character-Jacket
+    2100026: Cube_Character-Iris
+    2100028: Cube_Character-Eyebrow
+    2100030: Cube_Character-Skin_001
+    2100032: Cube_Character-Teeth_001
+    2100034: Cube_Character-Tongue_001
+    2300000: //RootNode
+    2300002: Cube_Object
+    2300004: Cube
+    2300006: Cube_Character
+    2300008: Cube_Character_001
+    2300010: Cube_Character_002
+    2300012: Cube_Character-Old
+    2300014: Cube_Character_Copy
+    3300000: //RootNode
+    3300002: Cube_Object
+    3300004: Cube
+    3300006: Cube_Character
+    3300008: Cube_Character_001
+    3300010: Cube_Character_002
+    3300012: Cube_Character-Old
+    3300014: Cube_Character_Copy
+    4300000: Cube
+    4300002: Cube_Object
+    4300004: Cube_004
+    4300006: Cube_Character
+    4300008: Cube_Character_Copy
+    4300010: Cube_Character_001
+    4300012: Cube_Character_002
+    4300014: Cube_Character-Old
+    7400000: Idle
+    7400002: Run
+    7400004: Jump
+    7400006: Land
+    7400008: Punch
+    7400010: Moving
+    7400012: Punch
+    9500000: //RootNode
+    13700000: Cube_Character
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube
+    second: {fileID: 2100000, guid: 2db2fd868a1ce9e48bbd3fdda48db7dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Eyes
+    second: {fileID: 2100000, guid: c30ebc010184a3a43882c70a1908b17f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Hair
+    second: {fileID: 2100000, guid: 4c0e12f4b57dac9428998e31c059b04b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Mouth
+    second: {fileID: 2100000, guid: b13ee98bb85bbcb429d14efca63901e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Pants
+    second: {fileID: 2100000, guid: a1b84bae6986a714e804e114343e7770, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Shirt
+    second: {fileID: 2100000, guid: 5e2d4c1db370483429311b62a24a70fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Shoes
+    second: {fileID: 2100000, guid: ff9eed8ffcfcf8b4783e1664ffdcdb45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Skin
+    second: {fileID: 2100000, guid: 519b528f7df85754f8e8acf47db0461e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Teeth
+    second: {fileID: 2100000, guid: 24c00cce787200d47bdcf778aa527b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube_Character-Tongue
+    second: {fileID: 2100000, guid: 0934d3a9a56085d49babb530fa25d717, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 430
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Moving
+      takeName: Default Take
+      firstFrame: 440
+      lastFrame: 450
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Jump
+      takeName: Default Take
+      firstFrame: 465
+      lastFrame: 480
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Land
+      takeName: Default Take
+      firstFrame: 490
+      lastFrame: 500
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Punch
+      takeName: Default Take
+      firstFrame: 510
+      lastFrame: 520
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.2
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -16,6 +16,11 @@ TagManager:
   - Button-Pyramid
   - Turning Point
   - Pyramid Shot
+  - Button
+  - Light Gear
+  - Enemy
+  - Gear Fragment
+  - Geomorph
   layers:
   - Default
   - TransparentFX
@@ -25,7 +30,7 @@ TagManager:
   - UI
   - 
   - 
-  - Environment
+  - Camera Cull
   - 
   - 
   - 

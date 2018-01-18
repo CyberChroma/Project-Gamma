@@ -7,23 +7,23 @@ Direct3D:
     VRAM:     2019 MB
     Driver:   22.21.13.8205
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
-Loading C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.dll (this message is harmless)
-Platform assembly: C:\Users\Brandon\Documents\Unity\_Github\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.280 seconds
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Brandon\Documents\Unity\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.027 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.592748 ms
+UnloadTime: 1.908906 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2670 -> priority: 1 
-  Thread -> id: 2634 -> priority: 1 
+  Thread -> id: 288c -> priority: 1 
+  Thread -> id: 2994 -> priority: 1 

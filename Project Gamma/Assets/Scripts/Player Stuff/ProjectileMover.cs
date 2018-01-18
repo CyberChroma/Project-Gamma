@@ -16,7 +16,9 @@ public class ProjectileMover : MonoBehaviour {
 	}
 
 	void OnEnable () {
-		Instantiate (spawnExplosion, transform.position, transform.rotation);
+		if (spawnExplosion) {
+			Instantiate (spawnExplosion, transform.position, transform.rotation);
+		}
 		StartCoroutine ("Disable");
 	}
 
@@ -31,16 +33,20 @@ public class ProjectileMover : MonoBehaviour {
 
 	IEnumerator Disable () { // Deactivating it after a certain number of seconds
 		yield return new WaitForSeconds (lifetime);
-		Instantiate (deathExplosion, transform.position, transform.rotation);
+		if (deathExplosion) {
+			Instantiate (deathExplosion, transform.position, transform.rotation);
+		}
 		Destroy (gameObject); // Destroying the gameobject
 	}
 
 	void OnTriggerEnter (Collider other) {
 		if (!other.CompareTag ("Player") && !other.isTrigger) { // Of the projectile hit something that is not the player
-			if (other.CompareTag ("Button-Pyramid")) { // If the projectile collided with a pyramid button
+			if (other.CompareTag ("Button-Cube")) { // If the projectile collided with a cube button
 				other.GetComponent<ButtonController> ().Activate (); // Activate the button
 			}
-			Instantiate (deathExplosion, transform.position, transform.rotation);
+			if (deathExplosion) {
+				Instantiate (deathExplosion, transform.position, transform.rotation);
+			}
 			Destroy (gameObject); // Destroying the gameobject
 		}
 	}

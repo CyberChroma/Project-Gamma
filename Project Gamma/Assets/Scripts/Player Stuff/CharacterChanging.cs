@@ -21,11 +21,11 @@ public class CharacterChanging : MonoBehaviour {
 	public Transform pyramidCamPos; // Reference to the camera position
 	public bool pyramidCanChange; // Whether the player can ching into the pyramid character
 
-	private CameraController cameraController; // Reference to the camera controller
+	private CameraControllerMulti cameraController; // Reference to the camera controller
 
 	// Use this for initialization
 	void Start () {
-		cameraController = GetComponent<CameraController> (); // Getting the reference
+		cameraController = GetComponent<CameraControllerMulti> (); // Getting the reference
 		if (startCharacter == StartCharacter.Cube) { // If the active player is the cube
 			ActivateCube ();
 		} else if (startCharacter == StartCharacter.Sphere) { // If the active player is the sphere
@@ -45,8 +45,7 @@ public class CharacterChanging : MonoBehaviour {
 	void ChangeCharacter () { // Changes the user to a different character
 		if (cameraController.activePlayer == cube) { // If the active player is the cube
 			if (sphereCanChange || pyramidCanChange) { // If the user can change into the sphere or the pyramid
-				cube.GetComponent<CubeMovement> ().canMove = false; // Deactivating movement
-				cube.GetComponent<CubeAbilities> ().canMove = false; // Deactivating abilities
+				cube.GetComponent<PlayerMove> ().canMove = false; // Deactivating movement
 				if (sphereCanChange) { // If the user can change into the sphere
 					ActivateSphere ();
 				} else if (pyramidCanChange) { // If the user can change into the pyramid
@@ -78,8 +77,7 @@ public class CharacterChanging : MonoBehaviour {
 
 	void ActivateCube () { // Activates the cube
 		cameraController.activePlayer = cube; // Setting the active player
-		cube.GetComponent<CubeMovement> ().canMove = true; // Activating movement
-		cube.GetComponent<CubeAbilities> ().canMove = true; // Activating abilities
+		cube.GetComponent<PlayerMove> ().canMove = true; // Activating movement
 	}
 
 	void ActivateSphere () { // Activates the sphere

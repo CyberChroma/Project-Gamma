@@ -53,28 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkpoints:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  cubeUnactiveMat: {fileID: 2100000, guid: 535bcef8b868579459dca11e6aafa4dc, type: 2}
+  cubeUnactiveMat: {fileID: 2100000, guid: 7a6367aeba8721d41bc4e34f7115491c, type: 2}
   sphereUnactiveMat: {fileID: 2100000, guid: 589ab18cb0fabf648954bb5ffd7f84c0, type: 2}
   pyramidUnactiveMat: {fileID: 2100000, guid: 5f8b1e6684bb48b4aba0d3ff0331c887, type: 2}
-  cubeActiveMat: {fileID: 2100000, guid: 6d9ea99516175ae4eaf462502a2027a5, type: 2}
+  cubeActiveMat: {fileID: 2100000, guid: ab6d6ba0570c7f542935d590ba3d1337, type: 2}
   sphereActiveMat: {fileID: 2100000, guid: 9efac1758017c2640a58d25d5c0a27fd, type: 2}
   pyramidActiveMat: {fileID: 2100000, guid: c6eedbd36bb1c1048bd74ec356f16c06, type: 2}
   cubeActiveCheckpoint: 0

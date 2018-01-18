@@ -20,7 +20,7 @@ public class PlayerTracking : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (cameraController.activePlayer == player.gameObject) { // If the active player is the player this script is following
+		if (cameraController.target.gameObject == player.gameObject) { // If the active player is the player this script is following
 			MoveCam (); // Moves the camera, in the event of wall clipping
 			TurnCam (); // Turns the camera to face just above the player, mainly in the event of wall clipping
 		}
