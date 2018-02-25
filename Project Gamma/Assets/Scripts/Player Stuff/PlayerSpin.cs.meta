@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: fd528b1e1d487174bb395f1e410e0056
+timeCreated: 1466451252
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - iceBlock: {fileID: 191382, guid: 477870ef2eca81844a5a4b76403026a7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

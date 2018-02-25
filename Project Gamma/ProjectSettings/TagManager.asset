@@ -21,6 +21,9 @@ TagManager:
   - Enemy
   - Gear Fragment
   - Geomorph
+  - Environment
+  - Weak Point
+  - Button-Wall
   layers:
   - Default
   - TransparentFX
