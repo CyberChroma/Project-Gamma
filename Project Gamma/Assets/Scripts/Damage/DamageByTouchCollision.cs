@@ -33,7 +33,7 @@ public class DamageByTouchCollision : MonoBehaviour {
                         other.collider.GetComponent<TakeDamage>().Damage(damageAmount); // Sends the damage
                     }
                     if (push) { // If the object should be pushed
-                        other.collider.GetComponent<Rigidbody>().AddForce((other.transform.position - transform.position) * pushForce, ForceMode.Impulse); // Pushes the object
+                        other.collider.GetComponent<Rigidbody>().AddForce((other.transform.position - transform.position).normalized * pushForce, ForceMode.Impulse); // Pushes the object
                     }
                 }
             }

@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065032473367288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.69, y: 0.5000001, z: 11.54}
+  m_LocalPosition: {x: -14.2, y: 0.29999954, z: 16.48}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4809107273899952}
@@ -175,7 +175,7 @@ MonoBehaviour:
   fallStart: 0
   fallSpeed: 10
   height: 0
-  radius: 15
+  radius: 5
 --- !u!114 &114720101303713910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb9434bf5b6d874a8fc1a856769b626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
+  damageAmount: 1
   oneTime: 0
   tagsToDamage:
   - Player

@@ -23,6 +23,7 @@ public class PlayerJump : MonoBehaviour {
 		anim = GetComponentInChildren<Animator> (); // Getting the reference
 		inputManager = GameObject.Find ("Input Manager").GetComponent<InputManager> (); // Getting the reference
 		playerGroundCheck = GetComponent<PlayerGroundCheck> ();
+        canJump = false;
 	}
 
 	// Update is called once per frame

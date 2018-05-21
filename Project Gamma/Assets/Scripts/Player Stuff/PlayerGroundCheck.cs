@@ -14,6 +14,7 @@ public class PlayerGroundCheck : MonoBehaviour {
 	void Awake () {
 		inputManager = GameObject.Find ("Input Manager").GetComponent<InputManager> (); // Getting the reference
 		anim = GetComponentInChildren<Animator> (); // Getting the reference
+        isGrounded = false;
 	}
 	
 	// Update is called once per frame

@@ -31,7 +31,7 @@ public class DamageByTouchTrigger : MonoBehaviour {
 					other.GetComponent<TakeDamage> ().Damage (damageAmount); // Sends the damage
 				}
                 if (push) { // If the object should be pushed
-                    other.GetComponent<Rigidbody> ().AddForce ((other.transform.position - transform.position) * pushForce, ForceMode.Impulse); // Pushes the object
+                    other.GetComponent<Rigidbody> ().AddForce ((other.transform.position - transform.position).normalized * pushForce, ForceMode.Impulse); // Pushes the object
 				}
 			}
 		}

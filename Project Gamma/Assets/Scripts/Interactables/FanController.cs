@@ -19,7 +19,7 @@ public class FanController : MonoBehaviour {
     void OnTriggerStay (Collider other) {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<Rigidbody>().AddForce(Vector3.up * force * 10);
+            other.GetComponent<Rigidbody>().AddForce(transform.forward * force * 10);
         }
     }
 }
