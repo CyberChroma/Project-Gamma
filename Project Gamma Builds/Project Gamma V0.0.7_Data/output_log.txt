@@ -19,11 +19,11 @@ Platform assembly: C:\Users\Brandon\Documents\GitHub\Project-Gamma\Project Gamma
 Loading C:\Users\Brandon\Documents\GitHub\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
 Platform assembly: C:\Users\Brandon\Documents\GitHub\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\Brandon\Documents\GitHub\Project-Gamma\Project Gamma Builds\Project Gamma V0.0.7_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.034 seconds
+- Completed reload, in  1.225 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.443841 ms
+UnloadTime: 1.445546 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: bdc -> priority: 1 
-  Thread -> id: 1440 -> priority: 1 
+  Thread -> id: 33c8 -> priority: 1 
+  Thread -> id: 2370 -> priority: 1 

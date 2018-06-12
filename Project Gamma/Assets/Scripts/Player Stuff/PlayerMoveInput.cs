@@ -15,7 +15,7 @@ public class PlayerMoveInput : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		playerMove = GetComponent<MoveByForce> (); // Getting the reference
-		moveInputReceiver = GameObject.Find ("Input Manager").GetComponent<MoveInputReceiver>(); // Getting the reference
+        moveInputReceiver = FindObjectOfType<InputManager>().GetComponent<MoveInputReceiver>(); // Getting the reference
 	}
 
 	void OnDisable () {

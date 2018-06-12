@@ -13,7 +13,7 @@ public class ActivateFollowTarget : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		isActivated = false; // Setting the bool
-		anim = GetComponentInParent <Animator> (); // Getting the reference
+		anim = GetComponentInParent<Animator>(); // Getting the reference
 		foreach (FollowTargetChangeOnReach triggerObject in objectsToTrigger) { // Goes through each object that must be activated
 			triggerObject.enabled = false; // Enables the script
 		}

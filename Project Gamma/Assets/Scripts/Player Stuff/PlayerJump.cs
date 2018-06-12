@@ -27,7 +27,7 @@ public class PlayerJump : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (playerGroundCheck.isGrounded) { // If the player is on the ground
 			if (inputManager.inputMF || inputManager.inputML || inputManager.inputMR || inputManager.inputMB) { // If the player is not moving
 				anim.SetBool ("Idle", true); // Setting the bool
@@ -54,7 +54,7 @@ public class PlayerJump : MonoBehaviour {
 	}
 
 	void Jump () { // Makes the cube jump
-		if (inputManager.inputJD) { // If the player hits the jump button and can jump
+        if (inputManager.inputJD) { // If the player hits the jump button and can jump
 			rb.AddForce (Vector3.up * jumpPower * 100); // Applying jump force
 			anim.SetTrigger ("Jump"); // Setting the trigger
 			anim.SetBool ("Falling", false); // Setting the bool

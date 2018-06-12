@@ -51,7 +51,8 @@ public class InputManager : MonoBehaviour {
 			inputMR = Input.GetKey (moveRight); // Getting input for moving right
 
 			inputJ = Input.GetKey (jump); // Getting input for using ability
-			inputJD = Input.GetKey (jump); // Getting input for using ability
+			inputJD = Input.GetKeyDown (jump); // Getting input for using ability
+
 			inputMA = Input.GetKeyDown (mainAttack); // Getting input for using ability
 			inputA1 = Input.GetKeyDown (ability1); // Getting input for using ability
 			inputA2 = Input.GetKeyDown (ability2); // Getting input for using ability
@@ -63,6 +64,9 @@ public class InputManager : MonoBehaviour {
 			inputMB = false;
 			inputML = false;
 			inputMR = false;
+
+            inputJ = false;
+            inputJD = false;
 
 			inputMA = false;
 			inputA1 = false;

@@ -51,21 +51,27 @@ public class FollowTargetChangeOnReach : MonoBehaviour {
 		following = false; // Setting the bool
 		yield return new WaitForSeconds (delay); // Waits...
 		targetNum++; // Increasing the target number
-		if (targetNum > targets.Length - 1) { // If the end of the array has been reached
-			if (oneTime) {
-				enabled = false;
-			} else {
-				targetNum = 0; // Reset the target number
-			}
-		}
-		if (followTargetConstant) { // If this has a value
-			rb.position = followTargetConstant.target.position; // Moving the object to the target's position
-			followTargetConstant.target = targets [targetNum]; // Setting the target to the next in the array
-		}
-		if (followTargetLerp) { // If this has a value
-			rb.position = followTargetLerp.target.position; // Moving the object to the target's position
-			followTargetLerp.target = targets [targetNum]; // Setting the target to the next in the array
-		}
-		following = true; // Setting the bool
+        if (targetNum > targets.Length - 1 && oneTime)
+        {
+            enabled = false;
+        } else {
+            if (targetNum > targets.Length - 1)
+            { // If the end of the array has been reached
+                {
+                    targetNum = 0; // Reset the target number
+                }
+            }
+            if (followTargetConstant)
+            { // If this has a value
+                rb.position = followTargetConstant.target.position; // Moving the object to the target's position
+                followTargetConstant.target = targets[targetNum]; // Setting the target to the next in the array
+            }
+            if (followTargetLerp)
+            { // If this has a value
+                rb.position = followTargetLerp.target.position; // Moving the object to the target's position
+                followTargetLerp.target = targets[targetNum]; // Setting the target to the next in the array
+            }
+            following = true; // Setting the bool
+        }
 	}
 }

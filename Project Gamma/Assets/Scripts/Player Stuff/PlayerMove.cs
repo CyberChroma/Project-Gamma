@@ -38,10 +38,13 @@ public class PlayerMove : MonoBehaviour {
 		currentRotSmoothing = rotSmoothing / 10;
 		playerGroundCheck = GetComponent<PlayerGroundCheck> ();
 	}
-	
-	// Update is called once per frame
+
+    // Update is called once per frame
+    void Update () {
+        GetInput();
+    }
+
 	void FixedUpdate () {
-		GetInput ();
 		Move ();
 		Turn ();
 	}
@@ -129,9 +132,14 @@ public class PlayerMove : MonoBehaviour {
 		if (other.collider.CompareTag ("Stick")) { // If the player collided with a moving platform they should stick to
 			stickRb = other.gameObject.GetComponentInParent<Rigidbody> ();
 		} else if (other.gameObject.CompareTag ("Button")) {
-			other.gameObject.GetComponent<ActivateFollowTarget> ().Activate (); // Activates the button
+            if (other.gameObject.GetComponent<ActivateFollowTarget>()) {
+			    other.gameObject.GetComponent<ActivateFollowTarget>().Activate (); // Activates the button
+            }
+            if (other.gameObject.GetComponent<ActivateFallOnActivate>()) {
+                other.gameObject.GetComponent<ActivateFallOnActivate>().Activate (); // Activates the button
+            }
 		} else if (other.gameObject.CompareTag ("Button-All")) { // If the player collided with a button
-			other.gameObject.GetComponent<ButtonController> ().Activate (); // Activates the button
+			other.gameObject.GetComponent<ButtonController>().Activate (); // Activates the button
 		}
 		if (other.collider.name.StartsWith ("Falling Platform")) { // If the player collided with falling platform (can't use tag)
 			fpc = other.collider.GetComponent<FallingPlatformController> (); // Getting a reference to the falling platform controller script

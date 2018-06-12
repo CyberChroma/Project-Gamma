@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4671847989543962}
   - component: {fileID: 54811989776615152}
-  - component: {fileID: 114124275886291824}
+  - component: {fileID: 114240952206258038}
   - component: {fileID: 114367490493434518}
   - component: {fileID: 114720101303713910}
   - component: {fileID: 114754965436063600}
@@ -90,6 +90,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 83f3434e67c4f934ca13c9050baca577, type: 2}
   m_StaticBatchInfo:
@@ -126,7 +127,7 @@ Rigidbody:
   m_GameObject: {fileID: 1065032473367288}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -145,7 +146,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114124275886291824
+--- !u!114 &114240952206258038
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -153,13 +154,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1065032473367288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d43ba22966311b4f8ff0786b50a1eae, type: 3}
+  m_Script: {fileID: 11500000, guid: 87de9ddd690f376428bf145143959229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  force: 20
   dir: {x: 0, y: 0, z: 0}
   relative: 0
-  once: 0
 --- !u!114 &114367490493434518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -172,9 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSensitivity: 0.1
-  fallStart: 0
-  fallSpeed: 10
-  height: 0
   radius: 5
 --- !u!114 &114720101303713910
 MonoBehaviour:
@@ -192,7 +189,7 @@ MonoBehaviour:
   tagsToDamage:
   - Player
   push: 1
-  pushForce: 5
+  pushForce: 2
   canDamage: 1
 --- !u!114 &114754965436063600
 MonoBehaviour:
