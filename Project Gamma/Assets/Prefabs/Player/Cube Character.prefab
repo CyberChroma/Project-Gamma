@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114706176929960028}
   - component: {fileID: 114302687564860230}
   - component: {fileID: 114357401218070870}
+  - component: {fileID: 114876659248996828}
   - component: {fileID: 114692390563911282}
   - component: {fileID: 114353786459936288}
   - component: {fileID: 114300664118220556}
@@ -130,7 +131,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2db2fd868a1ce9e48bbd3fdda48db7dc, type: 2}
+  - {fileID: 2100000, guid: 978d911b8d929a14098d5ee3bc947caa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -394,3 +395,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slopeLimit: 30
   isGrounded: 1
+--- !u!114 &114876659248996828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1484047557976418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dd987f0f08b174f925cf8e861cfb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

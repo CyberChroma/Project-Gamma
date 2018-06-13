@@ -26,19 +26,26 @@ public class Health : MonoBehaviour {
         anim = GetComponentInChildren<Animator>();
     }
 
-    public void ChangeHealth () {
-        healthChanged = true; // Updates the UI
-        if (currentHealth <= 0 && !dead) { // If the object has no health left
-            if (rb) {
-                rb.isKinematic = true;
+    public void Damage () {
+        if (canBeHit) { // If the object can be hit
+            currentHealth--; // Lose health
+            healthChanged = true; // Updates the UI
+            if (gameObject.activeSelf) {
+                StartCoroutine (TempStopHits ()); // Temporarily stops the object from taking damage
             }
-            if (anim) {
-                anim.SetTrigger("Death");
+            healthChanged = true; // Updates the UI
+            if (currentHealth <= 0 && !dead) { // If the object has no health left
+                if (rb) {
+                    rb.isKinematic = true;
+                }
+                if (anim) {
+                    anim.SetTrigger("Death");
+                }
+                if (disableOnDeath) {
+                    StartCoroutine (Disable ());
+                }
+                dead = true;
             }
-            if (disableOnDeath) {
-                StartCoroutine (Disable ());
-            }
-            dead = true;
         }
     }
 

@@ -5,25 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
-  - Button-All
   - Kill
-  - Breakable
-  - Button-Cube
   - Stick
-  - Boost
-  - Button-Sphere
-  - Smashable
-  - Button-Pyramid
-  - Turning Point
-  - Pyramid Shot
   - Button
-  - Light Gear
   - Enemy
   - Gear Fragment
-  - Geomorph
   - Environment
-  - Weak Point
-  - Button-Wall
+  - Hazard
+  - Spinnable
   layers:
   - Default
   - TransparentFX

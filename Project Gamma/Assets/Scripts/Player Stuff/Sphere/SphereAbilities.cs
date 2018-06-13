@@ -87,7 +87,7 @@ public class SphereAbilities : MonoBehaviour {
 			if (bounceUnlocked) { // If the bounce is unlocked
 				if (isSlamming) { // If the player is slaming
 					if (other.collider.CompareTag ("Button-Sphere")) { // If the object is a sphere button
-						other.collider.GetComponent<ButtonController> ().Activate (); // Activate it
+                        other.collider.GetComponent<ActivateFollowTarget> ().Activate (); // Activate it
 					} else if (other.collider.CompareTag ("Smashable")) { // If the object is a smashable object
 						other.collider.GetComponentInParent<Animator> ().SetTrigger ("Activate"); // Activate it
 					}

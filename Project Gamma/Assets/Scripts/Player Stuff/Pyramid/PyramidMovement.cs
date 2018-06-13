@@ -25,8 +25,6 @@ public class PyramidMovement : MonoBehaviour {
 	private bool canDoubleJump; // Bool for whether the player can double jump
 	private Transform pyramidObject;
 	private Animator anim; // Reference to the animator component
-	private MovingObjectController mOC; // Temporary reference to a moving object controller script
-	private FallingPlatformController fpc; // Temporary reference to a falling platform controller script
 	private InputManager inputManager;  // Reference to the input manager
 
 	private float v;
@@ -97,11 +95,6 @@ public class PyramidMovement : MonoBehaviour {
 			h = 0;
 		}
 		Vector3 moveVector = transform.forward * h * moveSpeed * Time.deltaTime; // Variable for movement
-		if (mOC && mOC.isActive) { // If the player has a reference to the moving object controller
-			moveVector += mOC.velocity; // Adding velocity of platform so the move together
-		} else if (fpc) {
-			moveVector += fpc.velocity;
-		}
 		rb.MovePosition (rb.position + moveVector); // Applying the movement
 		if (turning) { // If the player should be turning
 			transform.rotation = Quaternion.Euler (transform.rotation.x, Mathf.MoveTowards (transform.rotation.eulerAngles.y, targetRotation, turnSpeed), transform.rotation.z); // Turning the player
@@ -124,14 +117,6 @@ public class PyramidMovement : MonoBehaviour {
 			anim.SetBool ("Falling", false); // Setting the bool
 			anim.SetBool ("Idle", false); // Setting the bool
 			anim.SetBool ("Moving", false); // Setting the bool
-			if (mOC) { // If the player has a reference to the moving object controller
-				mOC.TestForDeactivate (); // Tests to deactivate the platform
-				mOC = null; // Removing the reference
-			}
-			if (fpc) { // If the player has a reference to the falling platform controller
-				fpc.Rise (); // Makes the platform start to rise
-				fpc = null; // Removing the reference
-			}
 			inputManager.inputJ = false;
 			isGrounded = false; // Setting the bool
 			canJump = false; // Setting the bool
@@ -158,15 +143,8 @@ public class PyramidMovement : MonoBehaviour {
 			canDoubleJump = false;
 			anim.SetTrigger ("Land"); // Setting the trigger
 		}
-		if (other.collider.CompareTag ("Stick")) { // If the player collided with a moving platform they should stick to
-			mOC = other.gameObject.GetComponentInParent<MovingObjectController> (); // Getting a reference to the moving object controller script
-			mOC.TestForActivate (); // Testing to activate it
-		} else if (other.gameObject.CompareTag ("Button-All")) { // If the player collided with a button
-			other.gameObject.GetComponent<ButtonController> ().Activate (); // Activates the button
-		}
-		if (other.collider.name.StartsWith ("Falling Platform")) { // If the player collided with falling platform (can't use tag)
-			fpc = other.collider.GetComponent<FallingPlatformController> (); // Getting a reference to the falling platform controller script
-			fpc.Fall (); // Making the platform fall
+		if (other.gameObject.CompareTag ("Button-All")) { // If the player collided with a button
+            other.gameObject.GetComponent<ActivateFollowTarget> ().Activate (); // Activates the button
 		}
 	}
 
@@ -181,14 +159,6 @@ public class PyramidMovement : MonoBehaviour {
 	void OnCollisionExit (Collision other) {
 		isGrounded = false; // Setting the bool
 		canJump = false; // Setting the bool
-		if (mOC) { // If the player has a reference to the moving object controller
-			mOC.TestForDeactivate (); // Tests to deactivate the platform
-			mOC = null; // Removing the reference
-		}
-		if (fpc) { // If the player has a reference to the falling platform controller
-			fpc.Rise (); // Makes the platform start to rise
-			fpc = null; // Removing the reference
-		}
 		StartCoroutine (WaitToDisableJump ()); // The player can still jump for a few frames after they have left the platform
 	}
 

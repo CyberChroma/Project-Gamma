@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private Health health;
+
+    void OnCollisionEnter (Collision other) {
+        if (other.gameObject.CompareTag("Button"))
+        {
+            if (other.gameObject.GetComponent<ActivateFollowTarget>())
+            {
+                other.gameObject.GetComponent<ActivateFollowTarget>().Activate(); // Activates the button
+            }
+            if (other.gameObject.GetComponent<ActivateFallOnActivate>())
+            {
+                other.gameObject.GetComponent<ActivateFallOnActivate>().Activate(); // Activates the button
+            }
+        }
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Hazard")) 
+        {
+            health.Damage();
+        }
+    }
 }

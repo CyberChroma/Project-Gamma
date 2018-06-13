@@ -42,7 +42,7 @@ public class ProjectileMover : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (!other.CompareTag ("Player") && !other.isTrigger) { // Of the projectile hit something that is not the player
 			if (other.CompareTag ("Button-Cube")) { // If the projectile collided with a cube button
-				other.GetComponent<ButtonController> ().Activate (); // Activate the button
+                other.GetComponent<ActivateFollowTarget> ().Activate (); // Activate the button
 			}
 			if (deathExplosion) {
 				Instantiate (deathExplosion, transform.position, transform.rotation);

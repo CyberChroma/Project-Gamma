@@ -13,8 +13,6 @@ public class PlayerJump : MonoBehaviour {
 
 	private Animator anim; // Reference to the animator component
 	private InputManager inputManager;  // Reference to the input manager
-	private MovingObjectController moc; // Temporary reference to a moving object controller script
-	private FallingPlatformController fpc; // Temporary reference to a falling platform controller script
 	private PlayerGroundCheck playerGroundCheck;
 
 	// Use this for initialization
@@ -60,10 +58,6 @@ public class PlayerJump : MonoBehaviour {
 			anim.SetBool ("Falling", false); // Setting the bool
 			anim.SetBool ("Idle", false); // Setting the bool
 			anim.SetBool ("Moving", false); // Setting the bool
-			if (moc) { // If the player has a reference to the moving object controller
-				moc.TestForDeactivate (); // Tests to deactivate the platform
-				moc = null; // Removing the reference
-			}
 			playerGroundCheck.isGrounded = false; // Setting the bool
 			canJump = false; // Setting the bool
 		}
@@ -86,8 +80,17 @@ public class PlayerJump : MonoBehaviour {
 	}
 
 	void OnCollisionExit (Collision other) {
-		if (canJump) {
-			canJump = false; // Setting the bool
-		}
+        if (rb.velocity.y > 1)
+        {
+            canJump = false;
+        }
+        StartCoroutine(WaitToDisableJump());
 	}
+
+    IEnumerator WaitToDisableJump () {
+        yield return new WaitForSeconds(0.2f);
+        if (canJump) {
+            canJump = false; // Setting the bool
+        }
+    }
 }

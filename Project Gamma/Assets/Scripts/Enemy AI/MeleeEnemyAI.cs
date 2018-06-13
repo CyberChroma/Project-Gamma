@@ -14,14 +14,12 @@ public class MeleeEnemyAI : MonoBehaviour {
 	private MoveByForce enemyMove; // Reference to the move script
 	private Transform player; // Reference to the player
     private float moveSpeed;
-    private DamageByTouchCollision damageByTouchCollision;
 
 	// Use this for initialization
 	void Awake () {
         enemyMove = GetComponent<MoveByForce> (); // Getting the reference
         anim = GetComponentInChildren<Animator> (); // Getting the reference
         health = GetComponent<Health> ();
-        damageByTouchCollision = GetComponent<DamageByTouchCollision>();
 		player = GameObject.Find ("Cube Character").transform; // Getting the reference
 	}
 
@@ -46,9 +44,8 @@ public class MeleeEnemyAI : MonoBehaviour {
         }
         if (health.currentHealth <= 0) {
             enemyMove.dir = Vector3.zero;
-            damageByTouchCollision.canDamage = false;
             enabled = false;
-            health.ChangeHealth();
+            health.Damage();
         }
 	}
 

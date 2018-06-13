@@ -15,7 +15,7 @@ public class SpinDetection : MonoBehaviour {
 			if (other.CompareTag ("Breakable")) { // If the player collided with a breakable wall
 				other.GetComponentInChildren<Animator> ().SetTrigger ("Activate"); // Activates the animation
 			} else if (other.CompareTag ("Button-Wall")) { // If the player collided with a button
-				other.GetComponent<ButtonController> ().Activate (); // Activate the button
+                other.GetComponent<ActivateFollowTarget> ().Activate (); // Activate the button
 			}
 		}
 	}

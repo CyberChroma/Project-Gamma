@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 135801159075706812}
   - component: {fileID: 54899535059310806}
   - component: {fileID: 114334990727040354}
-  - component: {fileID: 114430766178607070}
   m_Layer: 0
   m_Name: Boulder
   m_TagString: Kill
@@ -113,25 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e7b7288f095fe41a3c60f2bb983a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 10
---- !u!114 &114430766178607070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1309749143619540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb9434bf5b6d874a8fc1a856769b626, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 1
-  oneTime: 0
-  tagsToDamage:
-  - Player
-  push: 0
-  pushForce: 0
-  canDamage: 1
+  delay: 10
 --- !u!135 &135801159075706812
 SphereCollider:
   m_ObjectHideFlags: 1

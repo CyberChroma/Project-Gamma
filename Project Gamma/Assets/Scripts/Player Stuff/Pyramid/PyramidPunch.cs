@@ -62,7 +62,7 @@ public class PyramidPunch : MonoBehaviour {
 			if (other.collider.CompareTag ("Breakable")) { // If the player collided with a breakable wall
 				other.collider.GetComponentInChildren<Animator> ().SetTrigger ("Activate"); // Activates the animation
 			} else if (other.collider.CompareTag ("Button-Cube")) { // If the player collided with a button
-				other.collider.GetComponent<ButtonController> ().Activate (); // Activate the button
+                other.collider.GetComponent<ActivateFollowTarget> ().Activate (); // Activate the button
 			}
 		}
 	}

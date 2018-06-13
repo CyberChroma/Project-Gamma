@@ -19,8 +19,6 @@ public class PlayerMove : MonoBehaviour {
 
 	private float currentRotSmoothing;
 	private Rigidbody stickRb;
-	private MovingObjectController moc; // Temporary reference to a moving object controller script
-	private FallingPlatformController fpc; // Temporary reference to a falling platform controller script
 	private Transform camPivot; // Reference to the camera pivot
 	private InputManager inputManager;  // Reference to the input manager
 	private PlayerGroundCheck playerGroundCheck;
@@ -119,16 +117,9 @@ public class PlayerMove : MonoBehaviour {
 			currentRotSmoothing = airRotSmoothing / 10;
 		}
 		rb.rotation = Quaternion.Slerp (rb.rotation, Quaternion.LookRotation (lookDir), currentRotSmoothing); // Rotating the player
-		if (moc && moc.isActive) { // If the player has a reference to the moving object controller
-			rb.rotation *= moc.rotVelocity; // Adds rotational velocity to make the player rotate with the platform
-		}
 	}
 
 	void OnCollisionEnter (Collision other) {
-		moc = other.gameObject.GetComponentInParent<MovingObjectController> (); // Getting a reference to the moving object controller script
-		if (moc) {
-			moc.TestForActivate (); // Testing to activate it
-		}
 		if (other.collider.CompareTag ("Stick")) { // If the player collided with a moving platform they should stick to
 			stickRb = other.gameObject.GetComponentInParent<Rigidbody> ();
 		} else if (other.gameObject.CompareTag ("Button")) {
@@ -138,24 +129,10 @@ public class PlayerMove : MonoBehaviour {
             if (other.gameObject.GetComponent<ActivateFallOnActivate>()) {
                 other.gameObject.GetComponent<ActivateFallOnActivate>().Activate (); // Activates the button
             }
-		} else if (other.gameObject.CompareTag ("Button-All")) { // If the player collided with a button
-			other.gameObject.GetComponent<ButtonController>().Activate (); // Activates the button
-		}
-		if (other.collider.name.StartsWith ("Falling Platform")) { // If the player collided with falling platform (can't use tag)
-			fpc = other.collider.GetComponent<FallingPlatformController> (); // Getting a reference to the falling platform controller script
-			fpc.Fall (); // Making the platform fall
 		}
 	}
 
 	void OnCollisionExit (Collision other) {
-		if (moc) { // If the player has a reference to the moving object controller
-			moc.TestForDeactivate (); // Tests to deactivate the platform
-			moc = null; // Removing the reference
-		}
-		if (fpc) { // If the player has a reference to the falling platform controller
-			fpc.Rise (); // Makes the platform start to rise
-			fpc = null; // Removing the reference
-		}
 		if (stickRb) {
 			stickRb = null;
 		}

@@ -27,11 +27,12 @@ public class PlayerLifeAndDeath : MonoBehaviour {
 			checkpointManager.pyramidSpawnPos = transform.position; // Setting spawn position to start position
 			checkpointManager.pyramidSpawnRot = transform.rotation; // Setting spawn rotation to start rotation
 		}*/
+        Instantiate (spawnParticles, transform.position, transform.rotation); // Creating the death particles
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (transform.position.y < -30 || health.currentHealth <= 0) { // Basically if the player falls off the map
+		if (transform.position.y < -30 || health.currentHealth <= 0) { // If the player falls out of the map
 			Die ();
 		}
 	}

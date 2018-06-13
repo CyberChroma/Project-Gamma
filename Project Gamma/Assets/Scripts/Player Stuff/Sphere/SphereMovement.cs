@@ -15,8 +15,6 @@ public class SphereMovement : MonoBehaviour {
 	[HideInInspector] public bool isGrounded; // Whether the player is on the ground
 	[HideInInspector] public Rigidbody rb; // Reference to the rigidbody component
 	private bool canJump;
-	private FallingPlatformController fpc; // Used for temporary references to falling platform controller scripts
-	private MovingObjectController mOC; // Used for temporary references to moveing platform controller scripts
 	private InputManager inputManager;
 	private float v = 0;
 	private float h = 0;
@@ -54,9 +52,6 @@ public class SphereMovement : MonoBehaviour {
 		} else {
 			h = 0;
 		}
-		if (mOC && mOC.isActive) { // If the player has a reference to a moving object controller
-			rb.position = (rb.position + mOC.velocity); // Adding to velocity to make the player follow the platform
-		}
 		Vector3 force = Vector3.ProjectOnPlane (camPivot.right, Vector3.up).normalized * h + Vector3.ProjectOnPlane (camPivot.forward, Vector3.up).normalized * v; // Variable for force
 		if (isGrounded) {
 			force *= moveSpeed; // Calculating force
@@ -79,7 +74,7 @@ public class SphereMovement : MonoBehaviour {
 			canJump = true; // Setting the bool
 		}
 		if (other.gameObject.CompareTag ("Button-All")) { // If then player has hit a button
-			other.gameObject.GetComponent<ButtonController> ().Activate (); // Activates it
+            other.gameObject.GetComponent<ActivateFollowTarget> ().Activate (); // Activates it
 		}
 	}
 
@@ -88,29 +83,11 @@ public class SphereMovement : MonoBehaviour {
 			isGrounded = true; // Setting the bool
 			canJump = true; // Setting the bool
 		}
-		if (other.collider.CompareTag ("Stick") && !mOC) { // If the object hit is a moving platform the player should stick to
-			mOC = other.gameObject.GetComponentInParent<MovingObjectController> (); // Getting the reference
-			rb.velocity -= mOC.velocity * 50; // Decreasing the velocity of the ball
-			mOC.TestForActivate (); // Testing to activate the platform
-		}
-		if (other.collider.name.StartsWith ("Falling Platform")) { // If the object hit is a falling platform
-			fpc = other.collider.GetComponent<FallingPlatformController> (); // Getting the reference
-			fpc.Fall (); // Making the platform fall
-		}
 	}
 
 	void OnCollisionExit (Collision other) {
 		isGrounded = false; // Setting the bool
 		canJump = false; // Setting the bool
-		if (other.collider.CompareTag ("Stick") && mOC) { // If the object left is a moving platform the player was sticking to
-			rb.velocity += mOC.velocity * 50; // Increasing the velocity of the ball
-			mOC.TestForDeactivate (); // Testing the deactivate the platform
-			mOC = null; // Removing the reference
-		}
-		if (other.collider.name.StartsWith ("Falling Platform") && fpc) { // If the left object is a falling platform
-			fpc.Rise (); // Making the platform rise again
-			fpc = null; // Removing the reference
-		}
 		StartCoroutine (WaitToDisableJump ()); // The player can still jump for a few frames after they have left the platform
 	}
 

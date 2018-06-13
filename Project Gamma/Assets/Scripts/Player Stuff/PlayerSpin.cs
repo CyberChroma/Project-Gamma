@@ -53,14 +53,14 @@ public class PlayerSpin : MonoBehaviour {
 		}
 		StartCoroutine (WaitToSpin ()); // Delay for between punches
 	}
-
+        
 	void OnTriggerStay (Collider other) {
-		if (isSpinning) { // If the cube is punching
-			if (other.CompareTag ("Breakable")) { // If the player collided with a breakable wall
-				other.GetComponentInChildren<Animator> ().SetTrigger ("Activate"); // Activates the animation
-			} else if (other.CompareTag ("Button-Cube")) { // If the player collided with a button
-				other.GetComponent<ButtonController> ().Activate (); // Activate the button
-			}
+        if (isSpinning) { // If the cube is spinning
+			if (other.CompareTag ("Spinnable")) { // If the player collided with something spinnable
+                other.GetComponent<Rigidbody>().isKinematic = false;
+            } else if (other.CompareTag ("Enemy")) {
+                other.GetComponent<Health>().Damage();
+            }
 		}
 	}
 
