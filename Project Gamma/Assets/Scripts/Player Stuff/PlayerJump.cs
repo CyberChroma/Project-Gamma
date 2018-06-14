@@ -14,6 +14,7 @@ public class PlayerJump : MonoBehaviour {
 	private Animator anim; // Reference to the animator component
 	private InputManager inputManager;  // Reference to the input manager
 	private PlayerGroundCheck playerGroundCheck;
+    private bool hasJumped;
 
 	// Use this for initialization
 	void Awake () {
@@ -22,25 +23,11 @@ public class PlayerJump : MonoBehaviour {
 		inputManager = GameObject.Find ("Input Manager").GetComponent<InputManager> (); // Getting the reference
 		playerGroundCheck = GetComponent<PlayerGroundCheck> ();
         canJump = false;
+        hasJumped = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (playerGroundCheck.isGrounded) { // If the player is on the ground
-			if (inputManager.inputMF || inputManager.inputML || inputManager.inputMR || inputManager.inputMB) { // If the player is not moving
-				anim.SetBool ("Idle", true); // Setting the bool
-				anim.SetBool ("Falling", false); // Setting the bool
-				anim.SetBool ("Moving", false); // Setting the bool
-			} else { // If the player is moving
-				anim.SetBool ("Moving", true); // Setting the bool
-				anim.SetBool ("Idle", false); // Setting the bool
-				anim.SetBool ("Falling", false); // Setting the bool
-			}
-		} else { // If the player is in the air
-			anim.SetBool ("Falling", true); // Setting the bool
-			anim.SetBool ("Idle", false); // Setting the bool
-			anim.SetBool ("Moving", false); // Setting the bool
-		}
 		if (canJump) { // If the player can jump
 			Jump ();
 		}
@@ -60,12 +47,14 @@ public class PlayerJump : MonoBehaviour {
 			anim.SetBool ("Moving", false); // Setting the bool
 			playerGroundCheck.isGrounded = false; // Setting the bool
 			canJump = false; // Setting the bool
+            hasJumped = true;
+            StartCoroutine(WaitToJump());
 		}
 	}
 
 	void OnCollisionEnter (Collision other) {
 		foreach (ContactPoint point in other.contacts) {
-			if (Vector3.Angle (Vector3.up, point.normal) <= playerGroundCheck.slopeLimit && Vector3.Angle (Vector3.up, point.normal) >= -playerGroundCheck.slopeLimit) { // If the slope is not too steep
+            if (Vector3.Angle (Vector3.up, point.normal) <= playerGroundCheck.slopeLimit && Vector3.Angle (Vector3.up, point.normal) >= -playerGroundCheck.slopeLimit && !hasJumped) { // If the slope is not too steep
 				canJump = true; // Setting the bool
 			}
 		}
@@ -73,7 +62,7 @@ public class PlayerJump : MonoBehaviour {
 
 	void OnCollisionStay (Collision other) {
 		foreach (ContactPoint point in other.contacts) {
-			if (Vector3.Angle (Vector3.up, point.normal) <= playerGroundCheck.slopeLimit && Vector3.Angle (Vector3.up, point.normal) >= -playerGroundCheck.slopeLimit && !canJump) { // If the slope is not too steep
+            if (Vector3.Angle (Vector3.up, point.normal) <= playerGroundCheck.slopeLimit && Vector3.Angle (Vector3.up, point.normal) >= -playerGroundCheck.slopeLimit && !canJump && !hasJumped) { // If the slope is not too steep
 				canJump = true; // Setting the bool
 			}
 		}
@@ -92,5 +81,10 @@ public class PlayerJump : MonoBehaviour {
         if (canJump) {
             canJump = false; // Setting the bool
         }
+    }
+
+    IEnumerator WaitToJump () {
+        yield return new WaitForSeconds(0.2f);
+        hasJumped = false;
     }
 }

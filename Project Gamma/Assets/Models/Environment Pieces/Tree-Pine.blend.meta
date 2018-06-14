@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 5f634862a77a10048839db4bd15f836b
-timeCreated: 1511730864
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -15,6 +13,8 @@ ModelImporter:
     400004: Trunk
     400006: Leaves-Pine
     400008: Trunk-Pine
+    2100000: Leaves-Pine
+    2100002: Trunk-Pine
     2300000: Leaves
     2300002: Trunk
     2300004: Leaves-Pine
@@ -41,7 +41,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Leaves-Pine
-    second: {fileID: 2100000, guid: 6bc4cb2c71ff5de4bab0f622e18dfdca, type: 2}
+    second: {fileID: 2100000, guid: ff6483c520b84ca448b3b180fb46f95a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -51,7 +51,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Trunk-Pine
-    second: {fileID: 2100000, guid: 275327b3b52ed2d4881d0e4e2b71cc13, type: 2}
+    second: {fileID: 2100000, guid: 3e878de518ce12245b5022aae4b0ae7d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,6 +70,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

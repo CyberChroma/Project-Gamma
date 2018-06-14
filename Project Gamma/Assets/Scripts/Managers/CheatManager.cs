@@ -32,8 +32,7 @@ public class CheatManager : MonoBehaviour {
 				if (checkpointManager.cubeActiveCheckpoint >= checkpointManager.checkpoints.Length) {
 					checkpointManager.cubeActiveCheckpoint = 0;
 				}
-				checkpointManager.cubeSpawnPos = checkpointManager.checkpoints [checkpointManager.cubeActiveCheckpoint].transform.position;
-				checkpointManager.cubeSpawnRot = checkpointManager.checkpoints [checkpointManager.cubeActiveCheckpoint].transform.rotation;
+                checkpointManager.SetSpawn(cameraController.target, checkpointManager.checkpoints[checkpointManager.cubeActiveCheckpoint].transform);
 			/*} else if (cameraController.target == characterChanging.sphere) {
 				checkpointManager.sphereActiveCheckpoint++;
 				if (checkpointManager.sphereActiveCheckpoint >= checkpointManager.checkpoints.Length) {
@@ -56,8 +55,7 @@ public class CheatManager : MonoBehaviour {
 				if (checkpointManager.cubeActiveCheckpoint < 0) {
 					checkpointManager.cubeActiveCheckpoint = checkpointManager.checkpoints.Length - 1;
 				}
-				checkpointManager.cubeSpawnPos = checkpointManager.checkpoints [checkpointManager.cubeActiveCheckpoint].transform.position;
-				checkpointManager.cubeSpawnRot = checkpointManager.checkpoints [checkpointManager.cubeActiveCheckpoint].transform.rotation;
+                checkpointManager.SetSpawn(cameraController.target, checkpointManager.checkpoints[checkpointManager.cubeActiveCheckpoint].transform);
 			/*} else if (cameraController.target == characterChanging.sphere) {
 				checkpointManager.sphereActiveCheckpoint--;
 				if (checkpointManager.sphereActiveCheckpoint < 0) {

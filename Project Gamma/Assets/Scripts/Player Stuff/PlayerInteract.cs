@@ -6,7 +6,11 @@ public class PlayerInteract : MonoBehaviour {
 
     private Health health;
 
-    void OnCollisionEnter (Collision other) {
+    void Awake () {
+        health = GetComponent<Health>();
+    }
+
+    void OnCollisionStay (Collision other) {
         if (other.gameObject.CompareTag("Button"))
         {
             if (other.gameObject.GetComponent<ActivateFollowTarget>())

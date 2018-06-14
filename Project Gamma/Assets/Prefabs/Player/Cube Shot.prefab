@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23928657113725898}
   - component: {fileID: 65949530124007344}
   - component: {fileID: 54604304313808164}
-  - component: {fileID: 114395867218921184}
   - component: {fileID: 114669025667016662}
   - component: {fileID: 114259364545371688}
   - component: {fileID: 114043701367669786}
@@ -60,8 +59,9 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fee55d24569d25c43a225f655e265374, type: 2}
+  - {fileID: 2100000, guid: 978d911b8d929a14098d5ee3bc947caa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -146,23 +146,6 @@ MonoBehaviour:
   dir: {x: 0, y: 0, z: 1}
   relative: 1
   once: 0
---- !u!114 &114395867218921184
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1289303976814772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87fc4b19a38ec934ea876ab1cda0d407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageAmount: 2
-  oneTime: 1
-  tagsToDamage:
-  - Enemy
-  push: 1
-  pushForce: 5
 --- !u!114 &114669025667016662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,4 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e7b7288f095fe41a3c60f2bb983a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
+  delay: 5

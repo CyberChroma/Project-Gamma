@@ -11,13 +11,12 @@ public class CubeWallJump : MonoBehaviour {
 	[HideInInspector] public Rigidbody rb; // Reference to the rigidbody
 
     private bool canWallJump;
-	private bool stopWallJump;
+    private bool hasWallJumped;
 	private PlayerMove playerMove;
 	private PlayerJump playerJump;
     private Vector3 launchDir;
 	private Animator anim; // Reference to the animator component
 	private InputManager inputManager;  // Reference to the input manager
-
 	// Use this for initialization
 	void Awake () {
 		playerMove = GetComponent<PlayerMove> ();
@@ -25,6 +24,7 @@ public class CubeWallJump : MonoBehaviour {
 		rb = GetComponent<Rigidbody> (); // Getting the reference
 		anim = GetComponentInChildren<Animator> (); // Getting the reference
 		inputManager = GameObject.Find ("Input Manager").GetComponent<InputManager> (); // Getting the reference
+        hasWallJumped = false;
 	}
 
 	void OnEnable () {
@@ -45,33 +45,26 @@ public class CubeWallJump : MonoBehaviour {
     }
 
     void OnCollisionEnter (Collision other) {
-        if (!stopWallJump) {
-            if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump)
+        if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump && !hasWallJumped)
+        {
+            if (Vector3.Angle(other.contacts[0].normal, Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up)) <= 90)
             {
-                if (Vector3.Angle(other.contacts[0].normal, Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up)) <= 90)
-                {
-                    launchDir = Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up);
-                }
-                canWallJump = true;
+                launchDir = Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up);
             }
+            canWallJump = true;
         }
     }
 
 	void OnCollisionStay (Collision other) {
-		if (!stopWallJump) {
-            if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump)
-            {
-                if (rb.velocity.y < 0)
-                { 
-                    rb.velocity *= 0.9f;
-                }
-                if (Vector3.Angle(other.contacts[0].normal, Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up)) <= 90)
-                {
-                    launchDir = Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up);
-                }
-                canWallJump = true;
+        if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump && !hasWallJumped)
+        {
+            if (rb.velocity.y < 0)
+            { 
+                rb.velocity *= 0.9f;
             }
-		}
+            launchDir = other.contacts[0].normal;
+            canWallJump = true;
+        }
 	}
 
     void OnCollisionExit (Collision other) {
@@ -87,6 +80,7 @@ public class CubeWallJump : MonoBehaviour {
 		StartCoroutine (StopWallJump ());
 		anim.SetTrigger ("Jump"); // Setting the trigger
 		StartCoroutine (playerMove.TempStopMove (0.25f));
+        canWallJump = false;
 	}
 
     IEnumerator WaitToDisableWallJump () {
@@ -96,9 +90,9 @@ public class CubeWallJump : MonoBehaviour {
     }
 
 	IEnumerator StopWallJump () {
-        stopWallJump = true;
-		yield return new WaitForSeconds (0.1f);
-        stopWallJump = false;
+        hasWallJumped = true;
+        yield return new WaitForSeconds (0.1f);
+        hasWallJumped = false;
 	}
 
 	IEnumerator StopTurn () {

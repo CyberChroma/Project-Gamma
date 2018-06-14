@@ -20,8 +20,6 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {		
-		transform.position = target.position; // Moving the camera pivot to the player's position
-		transform.rotation = target.rotation; // Rotating the camera pivot to behind the player
 		rb = GetComponent <Rigidbody> (); // Getting the reference
 	}
 	

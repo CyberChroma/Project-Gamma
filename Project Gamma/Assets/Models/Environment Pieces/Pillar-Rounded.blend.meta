@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: a72c089a0cc5c0144a9b28fdeee31f8c
-timeCreated: 1515524188
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -24,7 +22,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Pillar2
-    second: {fileID: 2100000, guid: 8a117f4ae5174834ab8717216c256592, type: 2}
+    second: {fileID: 2100000, guid: 273f579df57fb1544972e7b6e9f5a2d2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,6 +41,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

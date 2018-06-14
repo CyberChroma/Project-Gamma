@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: ead168b2a0d467f42a64277f519eedd9
-timeCreated: 1515699795
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -19,7 +17,12 @@ ModelImporter:
     6400002: Block-Beveled
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Block-Beveled
+    second: {fileID: 2100000, guid: 273f579df57fb1544972e7b6e9f5a2d2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,6 +41,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

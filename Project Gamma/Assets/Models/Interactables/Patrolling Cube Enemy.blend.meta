@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: df3cbf2191e72d942b3bbd67a3316dd7
-timeCreated: 1511657359
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -20,6 +18,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Cube_Hazard
     second: {fileID: 2100000, guid: e4467ebf47c170548903c5704a55c11e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Patrolling_Cube_Enemy
+    second: {fileID: 2100000, guid: ee5700080af0d4948aeca294272e6f88, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -38,6 +41,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -62,6 +66,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

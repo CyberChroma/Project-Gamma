@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 0a3ae42f15558bb4caced530ab2e7467
-timeCreated: 1511799177
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -21,6 +19,11 @@ ModelImporter:
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dead_Tree
+    second: {fileID: 2100000, guid: 3e878de518ce12245b5022aae4b0ae7d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -49,6 +52,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

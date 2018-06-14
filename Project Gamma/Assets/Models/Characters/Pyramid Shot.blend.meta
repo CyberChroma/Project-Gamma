@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 7f59497d892dba147bb9baa4fd3b1641
-timeCreated: 1495468995
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -18,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Pyramid_Shot
-    second: {fileID: 2100000, guid: d772976d2f97e1446893536dab0ecf32, type: 2}
+    second: {fileID: 2100000, guid: 017f2ab103819f54db9a2f60118da28c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -37,6 +35,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -61,6 +60,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

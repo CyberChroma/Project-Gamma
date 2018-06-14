@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 57c3fa4b5851fbf48bf5efcc87b96e93
-timeCreated: 1465747901
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -9,6 +7,7 @@ ModelImporter:
     100002: Cube_Object
     400000: //RootNode
     400002: Cube_Object
+    2100000: Cube
     2300000: //RootNode
     2300002: Cube_Object
     3300000: //RootNode
@@ -29,7 +28,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube
-    second: {fileID: 2100000, guid: 2db2fd868a1ce9e48bbd3fdda48db7dc, type: 2}
+    second: {fileID: 2100000, guid: 978d911b8d929a14098d5ee3bc947caa, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -48,6 +47,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5

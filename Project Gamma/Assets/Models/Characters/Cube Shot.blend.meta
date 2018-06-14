@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: cfe29837855b7f342b6129c5b3aab1a8
-timeCreated: 1515518119
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -18,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Shot
-    second: {fileID: 2100000, guid: fee55d24569d25c43a225f655e265374, type: 2}
+    second: {fileID: 2100000, guid: 978d911b8d929a14098d5ee3bc947caa, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -37,6 +35,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

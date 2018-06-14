@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 0e88c68a36c95dc46b22cdf59b949439
-timeCreated: 1490042655
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -44,17 +42,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Button-All-Base
-    second: {fileID: 2100000, guid: 33e4a5d116e665547a1e6dbf5ec8c921, type: 2}
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Button-All-Top-Pressed
-    second: {fileID: 2100000, guid: 3aa1c97ed9cb1e341b41deed21380126, type: 2}
+    second: {fileID: 2100000, guid: 53b55f61ae054ed4d8b88cfe1864e0bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Button-All-Top-Unpressed
-    second: {fileID: 2100000, guid: 0e79b78c190379a4aaf866606a16d59f, type: 2}
+    second: {fileID: 2100000, guid: ee5700080af0d4948aeca294272e6f88, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -73,6 +71,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -97,6 +96,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

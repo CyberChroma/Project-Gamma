@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 7825a5ddd95bdc9439f4b82333dcf69f
-timeCreated: 1489367219
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -18,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Sphere
-    second: {fileID: 2100000, guid: 225ec7af12204504197d9a330581696a, type: 2}
+    second: {fileID: 2100000, guid: ba75b5d617e45da40a6859a060786b7d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -37,6 +35,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -61,6 +60,8 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

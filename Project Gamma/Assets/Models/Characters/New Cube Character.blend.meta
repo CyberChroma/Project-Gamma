@@ -275,82 +275,82 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Eyebrow
-    second: {fileID: 2100000, guid: 6a529211caa449145b5cdb1fed1094a4, type: 2}
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Eyes
-    second: {fileID: 2100000, guid: c30ebc010184a3a43882c70a1908b17f, type: 2}
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Hair
-    second: {fileID: 2100000, guid: 4c0e12f4b57dac9428998e31c059b04b, type: 2}
+    second: {fileID: 2100000, guid: 3e878de518ce12245b5022aae4b0ae7d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Iris
-    second: {fileID: 2100000, guid: b108f1c7506e24d458e8011318b47f21, type: 2}
+    second: {fileID: 2100000, guid: 53b55f61ae054ed4d8b88cfe1864e0bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Jacket
-    second: {fileID: 2100000, guid: a86e79dcda6350144a662a965e505821, type: 2}
+    second: {fileID: 2100000, guid: ee5700080af0d4948aeca294272e6f88, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Mouth
-    second: {fileID: 2100000, guid: b13ee98bb85bbcb429d14efca63901e5, type: 2}
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Pants
-    second: {fileID: 2100000, guid: a1b84bae6986a714e804e114343e7770, type: 2}
+    second: {fileID: 2100000, guid: 3101a2b6e9f71c54d857b2dfc7c4cae9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Pupil
-    second: {fileID: 2100000, guid: 4a35f2b8474913247a2b2e190fa3125a, type: 2}
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Shirt
-    second: {fileID: 2100000, guid: 5e2d4c1db370483429311b62a24a70fc, type: 2}
+    second: {fileID: 2100000, guid: 53b55f61ae054ed4d8b88cfe1864e0bc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Shoes
-    second: {fileID: 2100000, guid: ff9eed8ffcfcf8b4783e1664ffdcdb45, type: 2}
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Skin
-    second: {fileID: 2100000, guid: 519b528f7df85754f8e8acf47db0461e, type: 2}
+    second: {fileID: 2100000, guid: 978d911b8d929a14098d5ee3bc947caa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Skin_001
-    second: {fileID: 2100000, guid: 29c17238fd708f6429c6724763d1acbe, type: 2}
+    second: {fileID: 2100000, guid: 978d911b8d929a14098d5ee3bc947caa, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Teeth
-    second: {fileID: 2100000, guid: 24c00cce787200d47bdcf778aa527b15, type: 2}
+    second: {fileID: 2100000, guid: e50d1e9170cdb1d4ebcce74a0f75f73c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Teeth_001
-    second: {fileID: 2100000, guid: b2a7426f33f9cef4983c1d00c17bf175, type: 2}
+    second: {fileID: 2100000, guid: e50d1e9170cdb1d4ebcce74a0f75f73c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Tongue
-    second: {fileID: 2100000, guid: 0934d3a9a56085d49babb530fa25d717, type: 2}
+    second: {fileID: 2100000, guid: ee5700080af0d4948aeca294272e6f88, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cube_Character-Tongue_001
-    second: {fileID: 2100000, guid: af12a7b1ac071b64db6b84e5f58b46bd, type: 2}
+    second: {fileID: 2100000, guid: ee5700080af0d4948aeca294272e6f88, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
