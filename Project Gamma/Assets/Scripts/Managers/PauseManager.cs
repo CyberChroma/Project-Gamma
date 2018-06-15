@@ -17,8 +17,12 @@ public class PauseManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape) && !isPaused) { // Getting input to pause the game and making sure the game is not already paused
-			Pause ();
+        if (Input.GetKeyDown (KeyCode.Escape)) {
+            if (isPaused) {
+                Resume();
+            } else {
+			    Pause ();
+            }
 		} 
 	}
 
