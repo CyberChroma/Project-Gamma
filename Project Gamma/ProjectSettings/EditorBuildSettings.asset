@@ -6,4 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Test Scene.unity
+    path: Assets/Scenes/Crumble Heights.unity
+    guid: c44869cc6a2cf954ba4b61fb0c8e6f79
+  m_configObjects: {}

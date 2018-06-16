@@ -11,11 +11,11 @@ public class ItemManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gFText.text = "Gear Fragments: " + numGF;
+		gFText.text = "Fuel Cells: " + numGF;
 	}
 
 	public void IncreaseGearFragments () {
 		numGF++;
-		gFText.text = "Gear Fragments: " + numGF;
+		gFText.text = "Fuel Cells: " + numGF;
 	}
 }

@@ -4,19 +4,40 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Blades
+    100004: Fan
     400000: //RootNode
+    400002: Blades
+    400004: Fan
     2100000: Fan
+    2100002: Grey
+    2100004: Blue
     2300000: //RootNode
+    2300002: Blades
+    2300004: Fan
     3300000: //RootNode
+    3300002: Blades
+    3300004: Fan
     4300000: Fan
+    4300002: Blades
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: 3101a2b6e9f71c54d857b2dfc7c4cae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Fan
     second: {fileID: 2100000, guid: 3101a2b6e9f71c54d857b2dfc7c4cae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 273f579df57fb1544972e7b6e9f5a2d2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

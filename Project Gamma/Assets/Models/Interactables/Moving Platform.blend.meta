@@ -6,12 +6,24 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Moving_Platform
+    2100002: Black
+    2100004: Grey
     2300000: //RootNode
     3300000: //RootNode
     4300000: Moving_Platform
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 273f579df57fb1544972e7b6e9f5a2d2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

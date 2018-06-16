@@ -35,6 +35,7 @@ public class PauseManager : MonoBehaviour {
 		Time.timeScale = 0; // Freezes time
 		if (lockCursor) { // If the cursor should be locked
 			Cursor.lockState = CursorLockMode.None; // Unlocks the cursor
+            Cursor.visible = true;
 		}
 		isPaused = true; // Setting the bool
 	}
@@ -44,6 +45,7 @@ public class PauseManager : MonoBehaviour {
 		pauseScreen.SetActive (false); // Deactivates the pause screen panel
 		if (lockCursor) { // If the cursor should be locked
 			Cursor.lockState = CursorLockMode.Locked; // Unlocks the cursor
+            Cursor.visible = false;
 		}
 		Time.timeScale = 1; // Unfreezes time
 		isPaused = false; // Setting the bool

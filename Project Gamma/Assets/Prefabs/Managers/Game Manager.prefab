@@ -52,5 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayToStart: 1
-  fadeInSpeed: 0.2
+  fadeInSpeed: 0.1
   blackScreen: {fileID: 0}

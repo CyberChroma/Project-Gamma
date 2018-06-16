@@ -33,7 +33,7 @@ public class MeleeEnemyAI : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (player && Vector3.Distance(player.position, transform.position) <= radius && player.position.y > (transform.position.y - 0.1f)) {
+        if (player && Vector3.Distance(player.position, transform.position) <= radius && player.position.y > (transform.position.y - 0.5f)) {
             moveVector = Vector3.Lerp(moveVector, transform.forward * moveSpeed * Time.deltaTime, moveSensitivity / 10);
             Quaternion targetRotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(player.position - transform.position), turnSpeed); // Looks at the player
             transform.rotation = Quaternion.Euler(0, targetRotation.eulerAngles.y, 0); // Ignores x and z values
