@@ -1,22 +1,65 @@
 fileFormatVersion: 2
-guid: a446d570c8ca65d4b8902f73e69ad5d2
+guid: aa324063f9f0f2b47999cf504f48f9e7
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Bridge_Rope
+    100004: Bridge_Rope_001
+    100006: Bridge_Rope_002
+    100008: Bridge_Rope_003
+    100010: Pillar
+    100012: Pillar_001
+    100014: Pillar_002
+    100016: Pillar_003
     400000: //RootNode
+    400002: Bridge_Rope
+    400004: Bridge_Rope_001
+    400006: Bridge_Rope_002
+    400008: Bridge_Rope_003
+    400010: Pillar
+    400012: Pillar_001
+    400014: Pillar_002
+    400016: Pillar_003
     2100000: Light_Brown
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Bridge_Rope
+    2100002: Brown
+    2300000: Bridge_Rope
+    2300002: Bridge_Rope_001
+    2300004: Bridge_Rope_002
+    2300006: Bridge_Rope_003
+    2300008: Pillar
+    2300010: Pillar_001
+    2300012: Pillar_002
+    2300014: Pillar_003
+    3300000: Bridge_Rope
+    3300002: Bridge_Rope_001
+    3300004: Bridge_Rope_002
+    3300006: Bridge_Rope_003
+    3300008: Pillar
+    3300010: Pillar_001
+    3300012: Pillar_002
+    3300014: Pillar_003
+    4300000: Bridge_Rope_003
+    4300002: Bridge_Rope_002
+    4300004: Pillar_003
+    4300006: Pillar_002
+    4300008: Pillar_001
+    4300010: Pillar
+    4300012: Bridge_Rope_001
+    4300014: Bridge_Rope
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light_Brown
+      name: Brown
     second: {fileID: 2100000, guid: be560feed869b2e448fbe37675489b46, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light_Brown
+    second: {fileID: 2100000, guid: a554792416bad1343a3b0668005e028f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -72,7 +115,7 @@ ModelImporter:
     normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -91,7 +134,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
