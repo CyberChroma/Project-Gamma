@@ -32,6 +32,7 @@ public class PlayerLifeAndDeath : MonoBehaviour {
 		health.currentHealth = health.startHealth;
 		health.healthChanged = true;
 		Instantiate (spawnParticles, transform.position, transform.rotation); // Creating the spawn particles
+        playerMove.rb.isKinematic = false;
 	}
 	
 	void OnTriggerEnter (Collider other) {
