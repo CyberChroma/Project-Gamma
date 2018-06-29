@@ -14,7 +14,7 @@ public class GoalController : MonoBehaviour {
     void OnTriggerEnter (Collider other) {
         if (other.CompareTag("Player"))
         {
-            gameManager.LevelComplete();
+            gameManager.EndLevel("Level Select");
         }
     }
 }

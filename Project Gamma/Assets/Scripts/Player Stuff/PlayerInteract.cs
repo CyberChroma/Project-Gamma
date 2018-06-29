@@ -27,4 +27,11 @@ public class PlayerInteract : MonoBehaviour {
             health.Damage();
         }
     }
+
+    void OnTriggerStay (Collider other) {
+        if (other.CompareTag("Hazard")) 
+        {
+            health.Damage();
+        }
+    }
 }

@@ -1,8 +1,10 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Brandon/Documents/GitHub/Project-Gamma/Project Gamma Builds/Project Gamma Crumble Heights/Project Gamma Crumble Heights.exe
+C:/Users/Brandon/Documents/GitHub/Project-Gamma/Project Gamma Builds/Project Gamma Raging Rapids/Project Gamma Raging Rapids.exe
 SceneListBegin?
+Assets/Scenes/Level Select.unity
 Assets/Scenes/Crumble Heights.unity
+Assets/Scenes/Woods Ablaze.unity
 SceneListEnd?
 1f2a50a3f4c315f0eb5b39ac2d7cbb44 Assembly-CSharp.dll:.DestroyByTouchTrigger
 3b037def55e9cbbe9bc2aca9f4859919 Assembly-CSharp.dll:.RainbowColor
@@ -23,6 +25,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 8b07b48571fc61c486b6303f0c901deb Assembly-CSharp.dll:.PyramidMovement
 c1917e4de725b9c2df85c42c5470fc7c Assembly-CSharp.dll:.PlayerTracking
 54fd8e438c7d6264a342c6452567f2a7 Assembly-CSharp.dll:.FallOnCollision
+20c5b8f1fc21aaa0bbb1fb1a635fe31b Assembly-CSharp.dll:.LevelLoader
 e421f77856b784547125bfc1b00a87e6 Assembly-CSharp.dll:.SpinTransform
 54fd8e438c7d6264a342c6452567f2a7 Assembly-CSharp.dll:.FallOnActivate
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -196,6 +199,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 4d4e4ddabf2fd05af26ba7709886c5ce Assembly-CSharp.dll:.PlayerMove
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GoalController
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 ec992e385af136242b37f990f706cf74 Assembly-CSharp.dll:.BoostController
 d52be03d58c43819efb6825f98802654 Assembly-CSharp.dll:.PauseManager

@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: 699cf249d0243774ea5623d7f6f01b55
+  - enabled: 1
     path: Assets/Scenes/Crumble Heights.unity
     guid: c44869cc6a2cf954ba4b61fb0c8e6f79
   - enabled: 1
-    path: Assets/Scenes/Level Select.unity
-    guid: 699cf249d0243774ea5623d7f6f01b55
+    path: Assets/Scenes/Woods Ablaze.unity
+    guid: eac17335dcfa30e4fb013ee49d2098a0
+  - enabled: 1
+    path: Assets/Scenes/Raging Rapids.unity
+    guid: 50d837342f9e0b04aa65001a36cefe5e
   m_configObjects: {}

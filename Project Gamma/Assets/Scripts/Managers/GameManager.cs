@@ -49,17 +49,17 @@ public class GameManager : MonoBehaviour {
         playerLifeAndDeath.Die();
     }
 
-    public void LevelComplete () {        
-        StartCoroutine(WaitToEnd());
+    public void EndLevel (string levelToLoad) {        
+        StartCoroutine(WaitToLoad(levelToLoad));
     }
 
-    IEnumerator WaitToEnd () {
+    IEnumerator WaitToLoad (string levelToLoad) {
         cameraController.enabled = false;
         cube.GetComponent<Rigidbody>().isKinematic = true;
         StartCoroutine(inputManager.TempDisable(Mathf.Infinity));
         yield return new WaitForSeconds(1);
         fadeIn = false;
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("Level Select");
+        SceneManager.LoadScene(levelToLoad);
     }
 }

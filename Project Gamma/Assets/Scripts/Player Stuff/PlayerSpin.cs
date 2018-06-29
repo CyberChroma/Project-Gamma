@@ -64,14 +64,14 @@ public class PlayerSpin : MonoBehaviour {
 		}
 	}
 
-	IEnumerator WaitToSpin () { // Makes a delay for when the player can punch again
-		canSpin = false; // Disables the punch ability
+	IEnumerator WaitToSpin () { // Makes a delay for when the player can spin again
+		canSpin = false; // Disables the spin ability
         isSpinning = true;
         spinDetection.SetActive (true);
 		yield return new WaitForSeconds (spinTime); // Waits for the desired amount of time
         isSpinning = false;
         spinDetection.SetActive (false);
 		yield return new WaitForSeconds (spinDelay); // Waits for the desired amount of time
-        canSpin = true; // Re-enables the player's ability to punch
+        canSpin = true; // Re-enables the player's ability to spin
 	}
 }

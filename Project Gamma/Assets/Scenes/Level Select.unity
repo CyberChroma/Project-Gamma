@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 327643708}
-  m_IndirectSpecularColor: {r: 0.1486736, g: 0.3036409, b: 0.921083, a: 1}
+  m_IndirectSpecularColor: {r: 0.009977417, g: 0.49640673, b: 1.7075517, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -203,7 +203,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1917480283}
+    m_TransformParent: {fileID: 485737217}
     m_Modifications:
     - target: {fileID: 4983251410175212, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -235,11 +235,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4983251410175212, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1756841946876940, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_Name
-      value: Checkpoint (2)
+      value: Level Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 135718844671259360, guid: d9c98fa8ea86df04c8b62db047aa24c3,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
@@ -254,6 +259,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1756841946876940, guid: d9c98fa8ea86df04c8b62db047aa24c3,
     type: 2}
   m_PrefabInternal: {fileID: 144674013}
+--- !u!114 &144674016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144674015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bedf612d73ce24a9d6286c5f83638b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Woods Ablaze
 --- !u!224 &214307899 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224077315470465350, guid: 414c84fc8e2870047b6bc6d7153910b8,
@@ -264,7 +281,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1917480283}
+    m_TransformParent: {fileID: 485737217}
     m_Modifications:
     - target: {fileID: 4983251410175212, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -296,11 +313,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4983251410175212, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1756841946876940, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_Name
-      value: Checkpoint (3)
+      value: Level Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 135718844671259360, guid: d9c98fa8ea86df04c8b62db047aa24c3,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
@@ -315,6 +337,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1756841946876940, guid: d9c98fa8ea86df04c8b62db047aa24c3,
     type: 2}
   m_PrefabInternal: {fileID: 266226458}
+--- !u!114 &266226461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 266226460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bedf612d73ce24a9d6286c5f83638b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Raging Rapids
 --- !u!1 &327643707
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +512,9 @@ Transform:
   m_Children:
   - {fileID: 1763430429}
   - {fileID: 1606316318}
+  - {fileID: 570865925}
+  - {fileID: 144674014}
+  - {fileID: 266226459}
   - {fileID: 1917480283}
   m_Father: {fileID: 1166381199}
   m_RootOrder: 4
@@ -513,7 +550,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1917480283}
+    m_TransformParent: {fileID: 485737217}
     m_Modifications:
     - target: {fileID: 4983251410175212, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -545,11 +582,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4983251410175212, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1756841946876940, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
       propertyPath: m_Name
-      value: Checkpoint (1)
+      value: Level Entrance
+      objectReference: {fileID: 0}
+    - target: {fileID: 135718844671259360, guid: d9c98fa8ea86df04c8b62db047aa24c3,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d9c98fa8ea86df04c8b62db047aa24c3, type: 2}
@@ -564,6 +606,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1756841946876940, guid: d9c98fa8ea86df04c8b62db047aa24c3,
     type: 2}
   m_PrefabInternal: {fileID: 570865924}
+--- !u!114 &570865927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 570865926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2bedf612d73ce24a9d6286c5f83638b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelToLoad: Crumble Heights
 --- !u!1 &575860099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1625,34 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224921241797582206, guid: 0ed9c8ba69d96d14a9cad6c47c69fad3,
     type: 2}
   m_PrefabInternal: {fileID: 1465077722}
+--- !u!1 &1493528306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1493528307}
+  m_Layer: 0
+  m_Name: Load Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1493528307
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1493528306}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.9398594, y: 8.75214, z: 8.96445}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1513873150
 Prefab:
   m_ObjectHideFlags: 0
@@ -1893,7 +1975,7 @@ Prefab:
     - target: {fileID: 114751404558859178, guid: 1b2e990811bb71240a96c98e29c4f313,
         type: 2}
       propertyPath: checkpoints.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4988484903577820, guid: 1b2e990811bb71240a96c98e29c4f313, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2237,11 +2319,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 512525037}
-  - {fileID: 570865925}
-  - {fileID: 144674014}
-  - {fileID: 266226459}
   m_Father: {fileID: 485737217}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1927226964
 Prefab:

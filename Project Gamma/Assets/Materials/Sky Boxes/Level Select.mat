@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Level Select
-  m_Shader: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 2857dd2489d787444aab8677b35508dd, type: 3}
   m_ShaderKeywords: _SUNDISK_SIMPLE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -68,10 +68,13 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _SkyExponent1: 2
+    - _SkyIntensity: 1.75
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SunDisk: 1
+    - _SunIntensity: 10
     - _SunSize: 0.1
     - _SunSizeConvergence: 5
     - _UVSec: 0
@@ -80,4 +83,8 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0, g: 0.38809657, b: 1, a: 1}
+    - _MoonVector: {r: 0.269, g: 0.615, b: 0.74, a: 0}
+    - _SkyColor1: {r: 0, g: 1, b: 0.94843197, a: 0}
+    - _SkyColor2: {r: 0, g: 0.21097231, b: 1, a: 0}
     - _SkyTint: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
+    - _SunColor: {r: 1, g: 0.98999995, b: 0.87, a: 1}

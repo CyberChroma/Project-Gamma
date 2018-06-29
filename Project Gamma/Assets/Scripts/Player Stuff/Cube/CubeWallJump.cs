@@ -45,18 +45,15 @@ public class CubeWallJump : MonoBehaviour {
     }
 
     void OnCollisionEnter (Collision other) {
-        if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump && !hasWallJumped)
+        if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump && !hasWallJumped && !other.collider.CompareTag("Hazard") && !other.collider.CompareTag("Slippery"))
         {
-            if (Vector3.Angle(other.contacts[0].normal, Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up)) <= 90)
-            {
-                launchDir = Vector3.ProjectOnPlane(Vector3.Reflect(playerMove.moveVector.normalized, other.contacts[0].normal), Vector3.up);
-            }
+            launchDir = other.contacts[0].normal;
             canWallJump = true;
         }
     }
 
 	void OnCollisionStay (Collision other) {
-        if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump && !hasWallJumped)
+        if (Vector3.Angle(Vector3.up, other.contacts[0].normal) <= 100 && Vector3.Angle(Vector3.up, other.contacts[0].normal) >= 80 && !playerJump.canJump && !hasWallJumped && !other.collider.CompareTag("Hazard") && !other.collider.CompareTag("Slippery"))
         {
             if (rb.velocity.y < 0)
             { 
