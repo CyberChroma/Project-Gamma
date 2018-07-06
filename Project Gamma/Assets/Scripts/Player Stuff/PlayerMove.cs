@@ -133,7 +133,7 @@ public class PlayerMove : MonoBehaviour {
 	}
 
 	void OnCollisionExit (Collision other) {
-		if (stickRb) {
+        if (stickRb && other.collider.CompareTag ("Stick")) {
 			stickRb = null;
 		}
 	}

@@ -21,6 +21,8 @@ public class CameraController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {		
 		rb = GetComponent <Rigidbody> (); // Getting the reference
+        rotationX = -rb.rotation.eulerAngles.x;
+        rotationY = rb.rotation.eulerAngles.y;
 	}
 	
 	// Update is called once per frame
