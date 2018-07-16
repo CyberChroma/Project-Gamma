@@ -14,6 +14,7 @@ TagManager:
   - Hazard
   - Spinnable
   - Slippery
+  - Weak Point
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - 
   - 
   - Camera Cull
-  - 
-  - 
+  - Ignore Player
+  - Player
   - 
   - 
   - 

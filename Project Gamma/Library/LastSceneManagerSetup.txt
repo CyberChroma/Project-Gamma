@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Raging Rapids.unity
+- path: Assets/Scenes/Minning Away.unity
   isLoaded: 1
   isActive: 1

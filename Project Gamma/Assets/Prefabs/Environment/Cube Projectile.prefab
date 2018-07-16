@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114917006604378494}
   - component: {fileID: 114851086990744992}
   - component: {fileID: 54240683672161460}
+  - component: {fileID: 114608276209592534}
   m_Layer: 0
   m_Name: Cube Projectile
   m_TagString: Hazard
@@ -127,6 +128,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 10
+--- !u!114 &114608276209592534
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1981956306289482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bd5ffd37d2fac449e1dc10e478a699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParticles: {fileID: 0}
+  deathParticles: {fileID: 156676, guid: fd2084a101d7b6247a35bad1ee3a98d5, type: 2}
 --- !u!114 &114851086990744992
 MonoBehaviour:
   m_ObjectHideFlags: 1

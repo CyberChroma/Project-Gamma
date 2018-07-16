@@ -13,13 +13,17 @@ public class PlayerInteract : MonoBehaviour {
     void OnCollisionStay (Collision other) {
         if (other.gameObject.CompareTag("Button"))
         {
-            if (other.gameObject.GetComponent<ActivateFollowTarget>())
+            if (other.gameObject.GetComponent<ActivateFollowTarget>() && other.gameObject.GetComponent<ActivateFollowTarget>().type == ActivateFollowTarget.Type.floor)
             {
                 other.gameObject.GetComponent<ActivateFollowTarget>().Activate(); // Activates the button
             }
-            if (other.gameObject.GetComponent<ActivateFallOnActivate>())
+            if (other.gameObject.GetComponent<ActivateFallOnActivate>() && other.gameObject.GetComponent<ActivateFallOnActivate>().type == ActivateFallOnActivate.Type.floor)
             {
                 other.gameObject.GetComponent<ActivateFallOnActivate>().Activate(); // Activates the button
+            }
+            if (other.gameObject.GetComponent<ActivateGameObject>() && other.gameObject.GetComponent<ActivateGameObject>().type == ActivateGameObject.Type.floor)
+            {
+                other.gameObject.GetComponent<ActivateGameObject>().Activate(); // Activates the button
             }
         }
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Hazard")) 
@@ -32,6 +36,9 @@ public class PlayerInteract : MonoBehaviour {
         if (other.CompareTag("Hazard")) 
         {
             health.Damage();
+        }
+        if (other.CompareTag("Weak Point") && !transform.Find("Spin Detection").gameObject.activeSelf) {
+            other.GetComponentInParent<Health>().Damage();
         }
     }
 }

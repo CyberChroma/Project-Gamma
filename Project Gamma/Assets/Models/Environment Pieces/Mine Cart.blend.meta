@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: a6b394f32a65e6940b14bd4d3247db6b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cart
+    100004: Wheel
+    100006: Wheel_001
+    100008: Wheel_002
+    100010: Wheel_003
+    100012: Coal
+    100014: Coal_001
+    100016: Coal_002
+    100018: Coal_003
+    100020: Coal_004
+    100022: Coal_005
+    400000: //RootNode
+    400002: Cart
+    400004: Wheel
+    400006: Wheel_001
+    400008: Wheel_002
+    400010: Wheel_003
+    400012: Coal
+    400014: Coal_001
+    400016: Coal_002
+    400018: Coal_003
+    400020: Coal_004
+    400022: Coal_005
+    2100000: Material
+    2100002: Black
+    2100004: Grey
+    2300000: //RootNode
+    2300002: Cart
+    2300004: Wheel
+    2300006: Wheel_001
+    2300008: Wheel_002
+    2300010: Wheel_003
+    2300012: Coal
+    2300014: Coal_001
+    2300016: Coal_002
+    2300018: Coal_003
+    2300020: Coal_004
+    2300022: Coal_005
+    3300000: //RootNode
+    3300002: Cart
+    3300004: Wheel
+    3300006: Wheel_001
+    3300008: Wheel_002
+    3300010: Wheel_003
+    3300012: Coal
+    3300014: Coal_001
+    3300016: Coal_002
+    3300018: Coal_003
+    3300020: Coal_004
+    3300022: Coal_005
+    4300000: Cube
+    4300002: Wheel_003
+    4300004: Wheel_002
+    4300006: Wheel_001
+    4300008: Wheel
+    4300010: Cart
+    4300012: Coal_005
+    4300014: Coal_004
+    4300016: Coal_003
+    4300018: Coal_002
+    4300020: Coal_001
+    4300022: Coal
+    6400000: Cart
+    6400002: Coal
+    6400004: Coal_001
+    6400006: Coal_002
+    6400008: Coal_003
+    6400010: Coal_004
+    6400012: Coal_005
+    6400014: Wheel
+    6400016: Wheel_001
+    6400018: Wheel_002
+    6400020: Wheel_003
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: ae7d3221a64736e408fbd5f18278ff1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: 273f579df57fb1544972e7b6e9f5a2d2, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.5
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 0
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

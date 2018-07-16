@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ActivateFollowTarget : MonoBehaviour {
 
+    public enum Type
+    {
+        floor,
+        target
+    }
+
+    public Type type;
 	public FollowTargetChangeOnReach[] objectsToTrigger; // References to the objects that will be activated
 	public bool oneTime;
 

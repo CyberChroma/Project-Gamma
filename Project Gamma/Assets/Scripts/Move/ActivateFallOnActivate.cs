@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class ActivateFallOnActivate : MonoBehaviour {
 
+    public enum Type
+    {
+        floor,
+        target
+    }
+
+    public Type type;
     public FallOnActivate[] objectsToTrigger; // References to the objects that will be activated
 	public bool oneTime;
 

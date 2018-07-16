@@ -102,9 +102,9 @@ public class PlayerMove : MonoBehaviour {
 			}
 		}
 		if (stickRb && stickRb.gameObject.activeSelf) { // If the player has a reference to a moving object controller
-			moveVector += Vector3.ProjectOnPlane (stickRb.velocity * Time.deltaTime, Vector3.up); // Adding velocity of platform so they move together
+			//moveVector += Vector3.ProjectOnPlane (stickRb.velocity * Time.deltaTime, Vector3.up); // Adding velocity of platform so they move together
 		}
-		rb.MovePosition (rb.position + moveVector); // Applying the movement
+        rb.MovePosition (rb.position + moveVector); // Applying the movement
 		if (playerGroundCheck.isGrounded) {
 			rb.velocity *= 0.9f; // Simulating friction
 		}
@@ -122,6 +122,7 @@ public class PlayerMove : MonoBehaviour {
 	void OnCollisionEnter (Collision other) {
 		if (other.collider.CompareTag ("Stick")) { // If the player collided with a moving platform they should stick to
 			stickRb = other.gameObject.GetComponentInParent<Rigidbody> ();
+            //transform.SetParent(other.transform);
 		} else if (other.gameObject.CompareTag ("Button")) {
             if (other.gameObject.GetComponent<ActivateFollowTarget>()) {
 			    other.gameObject.GetComponent<ActivateFollowTarget>().Activate (); // Activates the button
@@ -135,6 +136,7 @@ public class PlayerMove : MonoBehaviour {
 	void OnCollisionExit (Collision other) {
         if (stickRb && other.collider.CompareTag ("Stick")) {
 			stickRb = null;
+            //transform.SetParent(null);
 		}
 	}
 
