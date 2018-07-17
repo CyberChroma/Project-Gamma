@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 54482236552291492}
   - component: {fileID: 114850566663140732}
   - component: {fileID: 114621565998863350}
+  - component: {fileID: 114592755603283312}
   m_Layer: 0
   m_Name: Mine Cart
   m_TagString: Untagged
@@ -948,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8fea818253ae24381e60fb85186ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 100
+  rotSpeed: 300
   dir: {x: 1, y: 0, z: 0}
   rotAcceleration: 0
 --- !u!114 &114030603436418788
@@ -962,7 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8fea818253ae24381e60fb85186ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 100
+  rotSpeed: 300
   dir: {x: 1, y: 0, z: 0}
   rotAcceleration: 0
 --- !u!114 &114283380889972148
@@ -976,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8fea818253ae24381e60fb85186ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 100
+  rotSpeed: 300
   dir: {x: 1, y: 0, z: 0}
   rotAcceleration: 0
 --- !u!114 &114455838922043702
@@ -990,9 +991,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8fea818253ae24381e60fb85186ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 100
+  rotSpeed: 300
   dir: {x: 1, y: 0, z: 0}
   rotAcceleration: 0
+--- !u!114 &114592755603283312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1499641068702126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7bd5ffd37d2fac449e1dc10e478a699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnParticles: {fileID: 156676, guid: 2ccf78e6438da634c99e26e50de70c57, type: 2}
+  deathParticles: {fileID: 156676, guid: 2ccf78e6438da634c99e26e50de70c57, type: 2}
 --- !u!114 &114621565998863350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1004,7 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e7b7288f095fe41a3c60f2bb983a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 20
+  delay: 15
 --- !u!114 &114850566663140732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1016,6 +1030,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87de9ddd690f376428bf145143959229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 1000
+  force: 1100
   dir: {x: 0, y: 0, z: 1}
   relative: 1
