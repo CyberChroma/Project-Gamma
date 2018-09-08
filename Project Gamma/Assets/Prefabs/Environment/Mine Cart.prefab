@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4297729933747982}
   - component: {fileID: 33337376183496212}
   - component: {fileID: 23005549531414646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal_001
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,9 +38,9 @@ GameObject:
   - component: {fileID: 4214360633004116}
   - component: {fileID: 33471698441718048}
   - component: {fileID: 23704770440663102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal_005
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 114850566663140732}
   - component: {fileID: 114621565998863350}
   - component: {fileID: 114592755603283312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mine Cart
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,9 +76,9 @@ GameObject:
   - component: {fileID: 23371475153514330}
   - component: {fileID: 64014951928334822}
   - component: {fileID: 114008555689332666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 4414931570163862}
   - component: {fileID: 33563474594059978}
   - component: {fileID: 23614659878805978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal_002
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,9 +111,9 @@ GameObject:
   - component: {fileID: 33751190986099562}
   - component: {fileID: 23922304011902362}
   - component: {fileID: 65763422882402180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cart
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,9 +128,9 @@ GameObject:
   - component: {fileID: 4842673896458632}
   - component: {fileID: 33427731859253964}
   - component: {fileID: 23825553233781114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,9 +145,9 @@ GameObject:
   - component: {fileID: 4476542779733428}
   - component: {fileID: 33315200756628726}
   - component: {fileID: 23648029236871060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal_003
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,9 +162,9 @@ GameObject:
   - component: {fileID: 4499108873717644}
   - component: {fileID: 33586241778542788}
   - component: {fileID: 23975343868809650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Coal_004
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,9 +181,9 @@ GameObject:
   - component: {fileID: 23320879357464904}
   - component: {fileID: 64524543799558220}
   - component: {fileID: 114455838922043702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel_001
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,9 +200,9 @@ GameObject:
   - component: {fileID: 23332279903533610}
   - component: {fileID: 64919444827057590}
   - component: {fileID: 114030603436418788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel_002
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,9 +219,9 @@ GameObject:
   - component: {fileID: 23618596595006276}
   - component: {fileID: 64937268175668022}
   - component: {fileID: 114283380889972148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheel_003
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

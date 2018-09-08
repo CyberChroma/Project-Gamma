@@ -26,9 +26,20 @@ public class PlayerInteract : MonoBehaviour {
                 other.gameObject.GetComponent<ActivateGameObject>().Activate(); // Activates the button
             }
         }
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Hazard")) 
+        if (other.gameObject.name.StartsWith("Spinner")) {
+            if (transform.position.y > other.transform.position.y + 0.5f)
+            {
+                GetComponent<Rigidbody>().AddForce(Vector3.up * 200);
+                other.gameObject.GetComponent<Health>().Damage();
+            }
+            else
+            {
+                health.Damage();
+
+            }
+        } else if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Hazard")) 
         {
-            health.Damage();
+             health.Damage();
         }
     }
 
@@ -36,9 +47,6 @@ public class PlayerInteract : MonoBehaviour {
         if (other.CompareTag("Hazard")) 
         {
             health.Damage();
-        }
-        if (other.CompareTag("Weak Point") && !transform.Find("Spin Detection").gameObject.activeSelf) {
-            other.GetComponentInParent<Health>().Damage();
         }
     }
 }

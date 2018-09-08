@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Minning Away.unity
+    guid: 4b507c534665a854bb636750f2913bef
+  - enabled: 1
     path: Assets/Scenes/Level Select.unity
     guid: 699cf249d0243774ea5623d7f6f01b55
   - enabled: 1
@@ -17,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Raging Rapids.unity
     guid: 50d837342f9e0b04aa65001a36cefe5e
+  - enabled: 1
+    path: Assets/Scenes/Into The Depths.unity
+    guid: ec8977d9cdf2ca243ae7050eb21e4cf4
   m_configObjects: {}

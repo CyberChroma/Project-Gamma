@@ -1,10 +1,13 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/Brandon/Documents/GitHub/Project-Gamma/Project Gamma Builds/Project Gamma Raging Rapids/Project Gamma Raging Rapids.exe
+C:/Users/Brandon/Documents/GitHub/Project-Gamma/Project Gamma Builds/Project Gamma Minning Away/Project Gamma Minning Away.exe
 SceneListBegin?
+Assets/Scenes/Minning Away.unity
 Assets/Scenes/Level Select.unity
 Assets/Scenes/Crumble Heights.unity
 Assets/Scenes/Woods Ablaze.unity
+Assets/Scenes/Raging Rapids.unity
+Assets/Scenes/Into The Depths.unity
 SceneListEnd?
 1f2a50a3f4c315f0eb5b39ac2d7cbb44 Assembly-CSharp.dll:.DestroyByTouchTrigger
 3b037def55e9cbbe9bc2aca9f4859919 Assembly-CSharp.dll:.RainbowColor
@@ -107,7 +110,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 30afa8783a8bbee2e465ec9ce1efaee2 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-75e09907676df0009bab8f43acf790d0 Assembly-CSharp.dll:.ActivateFollowTarget
+9cc9721cbb444d64dd22687149258460 Assembly-CSharp.dll:.ActivateFollowTarget
 187687d13ee96249e49dfb34fd28cde8 Assembly-CSharp.dll:.BounceController
 106a0232869876ce8839bce83eb613eb Assembly-CSharp.dll:.SphereAbilities
 2426401be3ceedf0f293dacd75094d9c Assembly-CSharp.dll:.MeleeEnemyAI
@@ -126,6 +129,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 03734e6a3b0c311515e9f176ce954179 Assembly-CSharp.dll:.CubeSlam
+2c2ac25345b084ccbe6ad2357ce2dc49 Assembly-CSharp.dll:.ActivateGameObject
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
@@ -139,6 +143,7 @@ ab232dc3d94359ca42eabb9c72cbbb82 Assembly-CSharp.dll:.FanController
 8efc7825ffc7792d1ba6c405ea645ad4 Assembly-CSharp.dll:.FollowTargetChangeOnReach
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SpinDetection
 6197857ecc57db2e51f5c2a992aad22f Assembly-CSharp.dll:.CameraController
+1206a843dc46dc02e02d2396193e9532 Assembly-CSharp.dll:.FlickeringLight
 def3e2130b3e1e217e345306f4db4e81 Assembly-CSharp.dll:.CheatManager
 65f30c21e4f7b14867773995acc8fef5 Assembly-CSharp.dll:.Health
 6937aa9f5d6e9fea65a71cc80bb08e5b Assembly-CSharp.dll:.EnemyMove
@@ -149,7 +154,7 @@ e62861c117e3b7fd6e4e53ab4e8b0b6d Assembly-CSharp.dll:.FollowTargetChangeOnActiva
 db42023c1bebcf9e327c63aab1f4be04 Assembly-CSharp.dll:.PlayerGroundCheck
 dc29ba410c00cd56b1067e92a79dcb2b Assembly-CSharp.dll:.CubeShoot
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ItemInteract
-7230179856650ac4d5b549f9c282f6b8 Assembly-CSharp.dll:.ActivateFallOnActivate
+9dee076d43bc055ba5583f4800f1ca5a Assembly-CSharp.dll:.ActivateFallOnActivate
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -205,9 +210,11 @@ ec992e385af136242b37f990f706cf74 Assembly-CSharp.dll:.BoostController
 d52be03d58c43819efb6825f98802654 Assembly-CSharp.dll:.PauseManager
 3203da5b31367c2a89286a4907522c84 Assembly-CSharp.dll:.PlayerLifeAndDeath
 54fd8e438c7d6264a342c6452567f2a7 Assembly-CSharp.dll:.FallOnTrigger
+eca315806db83f93cc2843293aaa5404 Assembly-CSharp.dll:.FloatingPlankController
 c58ccfa229c87e40537326cfb3a3f14c Assembly-CSharp.dll:.SpinInDirection
 7bcf45f79ef4ec4bcc0082974b6091e1 Assembly-CSharp.dll:.MoveByForce
 bfbf1c15cfb79a5c0ea8b9884a57aec6 Assembly-CSharp.dll:.PlayerJump
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CubeShotInteract
 3b28070f2551977e159e7f6a29f91be4 Assembly-CSharp.dll:.SpawnAndDestroyEffects
 6c8afefb4aa1584f859c8f4c703f51a4 Assembly-CSharp.dll:.PlayerSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.EnemyHealth

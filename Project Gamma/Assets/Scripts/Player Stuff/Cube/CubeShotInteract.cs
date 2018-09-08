@@ -23,7 +23,7 @@ public class CubeShotInteract : MonoBehaviour {
         }
         if (other.gameObject.CompareTag("Enemy")) 
         {
-            //Damage();
+            other.GetComponent<Health>().Damage();
         }
     }
 }
